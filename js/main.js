@@ -127,7 +127,7 @@
         $folioItems.each( function(i) {
 
             var $folio = $(this),
-                $thumbLink =  $folio.find('.thumb-link2'),
+                $thumbLink =  $folio.find('.thumb-link'),
                 $title = $folio.find('.item-folio__title'),
                 $caption = $folio.find('.item-folio__caption'),
                 $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
@@ -162,7 +162,7 @@
 
                 // initialize PhotoSwipe
                 var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                lightBox.init();
+              
             });
 
         });
