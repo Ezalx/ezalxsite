@@ -3822,7 +3822,7 @@ footer {
   padding-top: 9rem;
   padding-bottom: 6rem;
   color: rgba(255, 255, 255, 0.6);
-  background-color: #5e3080;
+  background-color: #0C0C0C;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   position: relative;
@@ -3852,8 +3852,8 @@ footer a {
 }
 
 .ss-go-top a {
-  color: #FFFFFF;
-  background-color: #351b48;
+  color: #000;
+  background-color: #06ecf2;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
