@@ -9,7 +9,7 @@
     
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        mailChimpURL   : '#'   // mailchimp url
     },
 
     $WIN = $(window);
@@ -127,7 +127,7 @@
         $folioItems.each( function(i) {
 
             var $folio = $(this),
-                $thumbLink =  $folio.find('.thumb-link'),
+                $thumbLink =  $folio.find('.thumb-link2'),
                 $title = $folio.find('.item-folio__title'),
                 $caption = $folio.find('.item-folio__caption'),
                 $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
