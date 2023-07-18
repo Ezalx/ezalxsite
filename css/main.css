@@ -2210,6 +2210,7 @@ body.menu-is-open {
 .home-content__button .btn:first-child {
   right: 50%;
   left: auto;
+  color:#000;
 }
 
 .home-content__button .btn:last-child {
