@@ -69,6 +69,8 @@ html {
 
 }
 
+
+.clients-wrap{position: relative;}
 html,
 body {
   height: 100%;
@@ -2758,7 +2760,7 @@ html.no-csstransitions .home-content__main {
   font-size: 2.1rem;
   font-weight: 700;
   text-align: center;
-  color: #FFFFFF;
+  color: #000;
   background-color: #06ecf2;
   height: 48px;
   width: 48px;
