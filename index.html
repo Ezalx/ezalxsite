@@ -11,13 +11,21 @@
     <link rel="canonical" href="https://ezalx.netlify.app/"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link rel="preload" as="image" href="images/hero-bg.jpg">
+
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="preload" href="css/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/vendor.css"></noscript>
+    
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
 
-
-    <script src="js/modernizr.js"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 
     <link rel="shortcut icon" href="ezalx.png" type="image/png">
    
@@ -315,7 +323,7 @@
                         <div class="item-folio__thumb">
                            <a href="https://lanmaritimelab.com/" class="thumb-link" title="Lan Maritime Lab" target="_blank" data-size="1050x700" aria-label="Visualizar Website Lan Maritime Lab">
                                 <img src="images/portfolio/lan-maritime-lab-pt.webp" 
-                        srcset="images/portfolio/lan-maritime-lab-pt.webp 1x, images/portfolio/lan-maritime-lab-pt.webp 2x" alt="Website Institucional Lan Maritime Lab">
+                        srcset="images/portfolio/lan-maritime-lab-pt.webp 1x, images/portfolio/lan-maritime-lab-pt.webp 2x" alt="Website Institucional Lan Maritime Lab" loading="lazy">
                             </a>
                         </div>
 
@@ -338,7 +346,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://cb2business.com/" class="thumb-link" title="CB2Business" target="_blank" data-size="1050x700" aria-label="Visualizar Website CB2Business">
                                 <img src="images/portfolio/c2b.webp" 
-                                     srcset="images/portfolio/c2b.webp 1x, images/portfolio/c2b.webp 2x" alt="Website para Produtora de vídeos CB2Business">
+                                     srcset="images/portfolio/c2b.webp 1x, images/portfolio/c2b.webp 2x" alt="Website para Produtora de vídeos CB2Business" loading="lazy">
                             </a>
                         </div>
 
@@ -361,7 +369,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://criamente.com/" class="thumb-link" title="Criamente" target="_blank" data-size="1050x700" aria-label="Visualizar Website Criamente">
                                 <img src="images/portfolio/criamente.webp" 
-                                     srcset="images/portfolio/criamente.webp 1x, images/portfolio/criamente.webp 2x" alt="Ajustes de animação CSS/JS no website Criamente">
+                                     srcset="images/portfolio/criamente.webp 1x, images/portfolio/criamente.webp 2x" alt="Ajustes de animação CSS/JS no website Criamente" loading="lazy">
                             </a>
                         </div>
 
@@ -384,7 +392,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://phadvocacia.com/" class="thumb-link" title="PHA ADV" target="_blank" data-size="1050x700" aria-label="Visualizar Website PH Advocacia">
                                 <img src="images/portfolio/pha.webp" 
-                                     srcset="images/portfolio/pha.webp 1x, images/portfolio/pha.webp 2x" alt="Website para escritório de advocacia PH Advocacia">
+                                     srcset="images/portfolio/pha.webp 1x, images/portfolio/pha.webp 2x" alt="Website para escritório de advocacia PH Advocacia" loading="lazy">
                             </a>
                         </div>
 
@@ -407,7 +415,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://aocomunicacao.com.br/" class="thumb-link" title="Aocomunicação" target="_blank" data-size="1050x700" aria-label="Visualizar Website Aocomunicação">
                                 <img src="images/portfolio/ao.webp" 
-                                     srcset="images/portfolio/ao.webp 1x, images/portfolio/ao.webp 2x" alt="Website Aocomunicação">
+                                     srcset="images/portfolio/ao.webp 1x, images/portfolio/ao.webp 2x" alt="Website Aocomunicação" loading="lazy">
                             </a>
                         </div>
 
@@ -430,7 +438,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://ceduek.com.br/" class="thumb-link" title="Ceduek" target="_blank" data-size="1050x700" aria-label="Visualizar Website Ceduek">
                                 <img src="images/portfolio/cd.webp" 
-                                     srcset="images/portfolio/cd.webp 1x, images/portfolio/cd.webp 2x" alt="Website Ceduek">
+                                     srcset="images/portfolio/cd.webp 1x, images/portfolio/cd.webp 2x" alt="Website Ceduek" loading="lazy">
                             </a>
                         </div>
 
@@ -453,7 +461,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://promofy.com.br/" class="thumb-link" title="Pomofy" target="_blank" data-size="1050x700" aria-label="Visualizar Website Promofy">
                                 <img src="images/portfolio/promofy.webp" 
-                                     srcset="images/portfolio/promofy.webp 1x, images/portfolio/promofy.webp 2x" alt="Programação e Relayout de Website Promofy em Wordpress">
+                                     srcset="images/portfolio/promofy.webp 1x, images/portfolio/promofy.webp 2x" alt="Programação e Relayout de Website Promofy em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -476,7 +484,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://filhadalua.com/" class="thumb-link" title="Filha da Lua" target="_blank" data-size="1050x700" aria-label="Visualizar Website Filha da Lua Eco Resort">
                                 <img src="images/portfolio/filhadalua.webp" 
-                                     srcset="images/portfolio/filhadalua.webp 1x, images/portfolio/filhadalua.webp 2x" alt="Criação de Website Exclusivo Filha da Lua em Wordpress">
+                                     srcset="images/portfolio/filhadalua.webp 1x, images/portfolio/filhadalua.webp 2x" alt="Criação de Website Exclusivo Filha da Lua em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -499,7 +507,7 @@
                         <div class="item-folio__thumb">
                             <a href="http://enovasys.net.br/" class="thumb-link" title="enovasys" target="_blank" data-size="1050x700" aria-label="Visualizar Website Enovasys">
                                 <img src="images/portfolio/enovasys.webp" 
-                                     srcset="images/portfolio/enovasys.webp 1x, images/portfolio/enovasys.webp 2x" alt="Criação de Website Enovasys em Wordpress">
+                                     srcset="images/portfolio/enovasys.webp 1x, images/portfolio/enovasys.webp 2x" alt="Criação de Website Enovasys em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -522,7 +530,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://kilhas.com.br/" class="thumb-link" title="Kilhas" target="_blank" data-size="1050x700" aria-label="Visualizar Website Kilhas">
                                 <img src="images/portfolio/kilhas.webp" 
-                                     srcset="images/portfolio/kilhas.webp 1x, images/portfolio/kilhas.webp 2x" alt="Criação de Website e Suporte Kilhas">
+                                     srcset="images/portfolio/kilhas.webp 1x, images/portfolio/kilhas.webp 2x" alt="Criação de Website e Suporte Kilhas" loading="lazy">
                             </a>
                         </div>
 
@@ -545,7 +553,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://institutomarurbano.com.br/" class="thumb-link" title="Instituto Mar Urbano" target="_blank" data-size="1050x700" aria-label="Visualizar Website Instituto Mar Urbano">
                                 <img src="images/portfolio/institutomarurbano.webp" 
-                                     srcset="images/portfolio/institutomarurbano.webp 1x, images/portfolio/institutomarurbano.webp 2x" alt="Cliente Fixo: Criação de Website, Suporte e Atualização de Conteúdo Instituto Mar Urbano">
+                                     srcset="images/portfolio/institutomarurbano.webp 1x, images/portfolio/institutomarurbano.webp 2x" alt="Cliente Fixo: Criação de Website, Suporte e Atualização de Conteúdo Instituto Mar Urbano" loading="lazy">
                             </a>
                         </div>
 
@@ -568,7 +576,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://grandepeixe.com.br/" class="thumb-link" title="Grande Peixe" target="_blank" data-size="1050x700" aria-label="Visualizar Website Grande Peixe">
                                 <img src="images/portfolio/ezalx-8.webp" 
-                                     srcset="images/portfolio/ezalx-8.webp 1x, images/portfolio/ezalx-8.webp 2x" alt="Website Institucional Grande Peixe em Wordpress">
+                                     srcset="images/portfolio/ezalx-8.webp 1x, images/portfolio/ezalx-8.webp 2x" alt="Website Institucional Grande Peixe em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -591,7 +599,7 @@
                         <div class="item-folio__thumb">
                             <a href="http://caciel.com.br/" class="thumb-link" title="Caciel" target="_blank" data-size="1050x700" aria-label="Visualizar Website Caciel">
                                 <img src="images/portfolio/ezalx-1.jpg" 
-                                     srcset="images/portfolio/ezalx-1.jpg 1x, images/portfolio/ezalx-1.jpg 2x" alt="Programação e suporte para o site Caciel em Wordpress">
+                                     srcset="images/portfolio/ezalx-1.jpg 1x, images/portfolio/ezalx-1.jpg 2x" alt="Programação e suporte para o site Caciel em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -614,7 +622,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://valeriamarques.com.br/" class="thumb-link" title="Valeria Marques Arquitetura" target="_blank" data-size="1050x700" aria-label="Visualizar Website Valeria Marques Arquitetura">
                                 <img src="images/portfolio/ezalx-2.jpg" 
-                                     srcset="images/portfolio/ezalx-2.jpg 1x, images/portfolio/ezalx-2.jpg 2x" alt="Criação de Website exclusivo Valeria Marques Arquitetura em Wordpress">
+                                     srcset="images/portfolio/ezalx-2.jpg 1x, images/portfolio/ezalx-2.jpg 2x" alt="Criação de Website exclusivo Valeria Marques Arquitetura em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -637,7 +645,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://escoladechorosp.com/" class="thumb-link" title="Escola de Choro de São Paulo" target="_blank" data-size="1050x700" aria-label="Visualizar Website Escola de Choro de São Paulo">
                                 <img src="images/portfolio/ezalx-4.jpg" 
-                                     srcset="images/portfolio/ezalx-4.jpg 1x, images/portfolio/ezalx-4.jpg 2x" alt="Criação de Website exclusivo Escola de Choro de São Paulo em Wordpress">
+                                     srcset="images/portfolio/ezalx-4.jpg 1x, images/portfolio/ezalx-4.jpg 2x" alt="Criação de Website exclusivo Escola de Choro de São Paulo em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -660,7 +668,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://tucafarroco.com.br/" class="thumb-link" title="Wix Site" target="_blank" data-size="1050x700" aria-label="Visualizar Website Tuca Farroco (Wix)">
                                 <img src="images/portfolio/ezalx-6.jpg" 
-                                     srcset="images/portfolio/ezalx-6.jpg 1x, images/portfolio/ezalx-6.jpg 2x" alt="Criação de website Tuca Farroco na plataforma Wix">
+                                     srcset="images/portfolio/ezalx-6.jpg 1x, images/portfolio/ezalx-6.jpg 2x" alt="Criação de website Tuca Farroco na plataforma Wix" loading="lazy">
                             </a>
                         </div>
 
@@ -686,7 +694,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://danielprimo.com/" class="thumb-link" title="Wordpress site Daniel Primo" target="_blank" data-size="1050x700" aria-label="Visualizar Website Daniel Primo">
                                 <img src="images/portfolio/daniel-primo.webp" 
-                                     srcset="images/portfolio/daniel-primo.webp 1x, images/portfolio/daniel-primo.webp 2x" alt="Layout e programação website Daniel Primo em Wordpress">
+                                     srcset="images/portfolio/daniel-primo.webp 1x, images/portfolio/daniel-primo.webp 2x" alt="Layout e programação website Daniel Primo em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -712,7 +720,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.bibisucos.com.br/" class="thumb-link" title="bibisucos" target="_blank" data-size="1050x700" aria-label="Visualizar Website Bibisucos">
                                 <img src="images/portfolio/bibisucos.webp" 
-                                     srcset="images/portfolio/bibisucos.webp 1x, images/portfolio/bibisucos.webp 2x" alt="Manutenção de Website e Mídia Indoor TVBIBI, Criação de Vinhetas Bibisucos">
+                                     srcset="images/portfolio/bibisucos.webp 1x, images/portfolio/bibisucos.webp 2x" alt="Manutenção de Website e Mídia Indoor TVBIBI, Criação de Vinhetas Bibisucos" loading="lazy">
                             </a>
                         </div>
 
@@ -738,7 +746,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://ponytail.com.br/" class="thumb-link" title="Ponytail" target="_blank" data-size="1050x700" aria-label="Visualizar E-commerce Ponytail">
                                 <img src="images/portfolio/ponytail.webp" 
-                                     srcset="images/portfolio/ponytail.webp 1x, images/portfolio/ponytail.webp 2x" alt="Criação, suporte e manutenção de E-commerce Ponytail (Plataforma Irroba)">
+                                     srcset="images/portfolio/ponytail.webp 1x, images/portfolio/ponytail.webp 2x" alt="Criação, suporte e manutenção de E-commerce Ponytail (Plataforma Irroba)" loading="lazy">
                             </a>
                         </div>
 
@@ -764,7 +772,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.galeriasurf.com/" class="thumb-link" title="Galeria Surf" target="_blank" data-size="1050x700" aria-label="Visualizar E-commerce Galeria Surf">
                                 <img src="images/portfolio/galeria-surf.webp" 
-                                     srcset="images/portfolio/galeria-surf.webp 1x, images/portfolio/galeria-surf.webp 2x" alt="Desenvolvimento de E-commerce Galeria Surf (Plataforma Nuvemshop)">
+                                     srcset="images/portfolio/galeria-surf.webp 1x, images/portfolio/galeria-surf.webp 2x" alt="Desenvolvimento de E-commerce Galeria Surf (Plataforma Nuvemshop)" loading="lazy">
                             </a>
                         </div>
 
@@ -789,7 +797,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://inti.rio/" class="thumb-link" title="inti" target="_blank" data-size="1050x700" aria-label="Visualizar Website Inti">
                                 <img src="images/portfolio/inti.webp" 
-                                     srcset="images/portfolio/inti.webp 1x, images/portfolio/inti.webp 2x" alt="Atualização e suporte para Website Inti">
+                                     srcset="images/portfolio/inti.webp 1x, images/portfolio/inti.webp 2x" alt="Atualização e suporte para Website Inti" loading="lazy">
                             </a>
                         </div>
 
@@ -813,7 +821,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://hamiltondeholanda.com/" class="thumb-link" title="Hamilton de Holanda" target="_blank" data-size="1050x700" aria-label="Visualizar Website Hamilton de Holanda">
                                 <img src="images/portfolio/hamilton-de-holanda.webp" 
-                                     srcset="images/portfolio/hamilton-de-holanda.webp 1x, images/portfolio/hamilton-de-holanda.webp 2x" alt="Criação de Layout e Programação Website Hamilton de Holanda em Wordpress">
+                                     srcset="images/portfolio/hamilton-de-holanda.webp 1x, images/portfolio/hamilton-de-holanda.webp 2x" alt="Criação de Layout e Programação Website Hamilton de Holanda em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -837,7 +845,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://mastermedsst.com.br/" class="thumb-link" title="Master Med" target="_blank" data-size="1050x700" aria-label="Visualizar Website Master Med">
                                 <img src="images/portfolio/mastermed.webp" 
-                                     srcset="images/portfolio/mastermed.webp 1x, images/portfolio/mastermed.webp 2x" alt="Criação de Layout exclusivo e programação Website Master Med em Wordpress">
+                                     srcset="images/portfolio/mastermed.webp 1x, images/portfolio/mastermed.webp 2x" alt="Criação de Layout exclusivo e programação Website Master Med em Wordpress" loading="lazy">
                             </a>
                         </div>
 
@@ -861,7 +869,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.instagram.com/p/CPl32uDnh9-Hw3bySNB0wPmXPFIS8U8CgsqmgU0/" class="thumb-link" title="Joa Pizzas" target="_blank" data-size="1050x700" aria-label="Visualizar Vinheta Joa Pizzas">
                                 <img src="images/portfolio/joa.webp" 
-                                     srcset="images/portfolio/joa.webp 1x, images/portfolio/joa.webp 2x" alt="Criação de Vinheta para Mídia Indoor Joa Pizzas">
+                                     srcset="images/portfolio/joa.webp 1x, images/portfolio/joa.webp 2x" alt="Criação de Vinheta para Mídia Indoor Joa Pizzas" loading="lazy">
                             </a>
                         </div>
 
@@ -885,7 +893,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.youtube.com/watch?v=Z5PVCPcZJUU" class="thumb-link" title="Bibilab Vinhetas" target="_blank" data-size="1050x700" aria-label="Visualizar Vinheta Bibilab">
                                 <img src="images/portfolio/bibilab.webp" 
-                                     srcset="images/portfolio/bibilab.webp 1x, images/portfolio/bibilab.webp 2x" alt="Criação de Vinheta para Mídia Digital Indoor Bibilab">
+                                     srcset="images/portfolio/bibilab.webp 1x, images/portfolio/bibilab.webp 2x" alt="Criação de Vinheta para Mídia Digital Indoor Bibilab" loading="lazy">
                             </a>
                         </div>
 
@@ -910,7 +918,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.instagram.com/p/CgKGXnqDJpbVqhbgTAHo-bZUXK5LP8xxnE_wVY0/" class="thumb-link" title="Bibilab Vinhetas" target="_blank" data-size="1050x700" aria-label="Visualizar Vinheta Totem Shopping Tijuca">
                                 <img src="images/portfolio/totem.webp" 
-                                     srcset="images/portfolio/totem.webp 1x, images/portfolio/totem.webp 2x" alt="Criação de Vinheta Totem Shopping Tijuca para Mídia Digital Indoor">
+                                     srcset="images/portfolio/totem.webp 1x, images/portfolio/totem.webp 2x" alt="Criação de Vinheta Totem Shopping Tijuca para Mídia Digital Indoor" loading="lazy">
                             </a>
                         </div>
 
@@ -934,7 +942,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.youtube.com/watch?v=UXfSLky6zzs" class="thumb-link" title="Bibilab Vinhetas" target="_blank" data-size="1050x700" aria-label="Visualizar Vinheta Bibi em casa 1">
                                 <img src="images/portfolio/bibisucos-vinhetas.webp" 
-                                     srcset="images/portfolio/bibisucos-vinhetas.webp 1x, images/portfolio/bibisucos-vinhetas.webp 2x" alt="Criação de Vinheta Bibi em casa 1 para Mídia Digital Indoor">
+                                     srcset="images/portfolio/bibisucos-vinhetas.webp 1x, images/portfolio/bibisucos-vinhetas.webp 2x" alt="Criação de Vinheta Bibi em casa 1 para Mídia Digital Indoor" loading="lazy">
                             </a>
                         </div>
 
@@ -958,7 +966,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.youtube.com/watch?v=Z5PVCPcZJUU" class="thumb-link" title="BibiLAB" target="_blank" data-size="1050x700" aria-label="Visualizar Vinheta Bibi LAB">
                                 <img src="images/portfolio/bibilab.webp" 
-                                     srcset="images/portfolio/bibilab.webp 1x, images/portfolio/bibilab.webp 2x" alt="Criação de Vinheta Bibi LAB para Mídia Digital Indoor">
+                                     srcset="images/portfolio/bibilab.webp 1x, images/portfolio/bibilab.webp 2x" alt="Criação de Vinheta Bibi LAB para Mídia Digital Indoor" loading="lazy">
                             </a>
                         </div>
 
@@ -982,7 +990,7 @@
                         <div class="item-folio__thumb">
                             <a href="https://www.instagram.com/p/C6ZbWrlOHuHI9I2WPBMG6vbTSnNNZDtFSL6Uc80/" class="thumb-link" title="Boardsco" target="_blank" data-size="1050x700" aria-label="Visualizar Artes Boardsco">
                                 <img src="images/portfolio/bc.webp" 
-                                     srcset="images/portfolio/bc.webp 1x, images/portfolio/bc.webp 2x" alt="Criação de artes para camisas da Boardsco">
+                                     srcset="images/portfolio/bc.webp 1x, images/portfolio/bc.webp 2x" alt="Criação de artes para camisas da Boardsco" loading="lazy">
                             </a>
                         </div>
 
@@ -1135,9 +1143,10 @@
 
         </div>
 
-    </div> <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    </div> <script src="js/modernizr.js" defer></script>
+    <script src="js/jquery-3.2.1.min.js" defer></script>
+    <script src="js/plugins.js" defer></script>
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>
