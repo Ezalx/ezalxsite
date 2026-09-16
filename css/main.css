@@ -92,7 +92,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #06ecf2;
+  color: #FF8A50;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -400,7 +400,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #06ecf2;
+  background: #FF8A50;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -409,7 +409,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 dd {
@@ -910,7 +910,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #06ecf2;
+  -webkit-text-fill-color: #FF8A50;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -968,8 +968,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #06ecf2;
-  border-color: #06ecf2;
+  background: #FF8A50;
+  border-color: #FF8A50;
   color: #FFFFFF;
 }
 
@@ -983,8 +983,8 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-  background: #6b3792;
-  border-color: #6b3792;
+  background: #E67E3C;
+  border-color: #E67E3C;
 }
 
 /* button modifiers
@@ -1238,7 +1238,7 @@ input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .stats-tabs li a em {
@@ -1281,7 +1281,7 @@ input::-moz-focus-inner {
 }
 
 .skill-bars li .progress {
-  background: #06ecf2;
+  background: #FF8A50;
   position: relative;
   height: 100%;
 }
@@ -1295,7 +1295,7 @@ input::-moz-focus-inner {
   color: #FFFFFF;
   font-size: 1.1rem;
   line-height: 1;
-  background: #06ecf2;
+  background: #FF8A50;
   padding: .6rem .6rem;
   border-radius: 3px;
 }
@@ -1307,7 +1307,7 @@ input::-moz-focus-inner {
   margin-left: -5px;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
-  border-top: 5px solid #06ecf2;
+  border-top: 5px solid #FF8A50;
   content: "";
 }
 
@@ -1436,7 +1436,7 @@ body.menu-is-open {
   line-height: 1.333;
   text-transform: uppercase;
   letter-spacing: .25rem;
-  color: #06ecf2;
+  color: #FF8A50;
   margin-top: 0;
   margin-bottom: 3rem;
   position: relative;
@@ -1725,7 +1725,7 @@ body.menu-is-open {
   margin-bottom: 7.2rem;
   margin-top: 1.2rem;
   padding-right: 140px;
-  color: #06ecf2;
+  color: #FF8A50;
   position: relative;
 }
 
@@ -1734,7 +1734,7 @@ body.menu-is-open {
   display: block;
   height: 1px;
   width: 110px;
-  background-color: #06ecf2;
+  background-color: #FF8A50;
   position: absolute;
   top: 50%;
   right: 0;
@@ -1792,11 +1792,11 @@ body.menu-is-open {
 }
 
 .header-nav__list a:hover::before {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .header-nav__list .current a::before {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .header-nav__social {
@@ -2161,7 +2161,7 @@ body.menu-is-open {
   height: 9rem;
   width: 9rem;
   border-radius: 50%;
-  background-color: #06ecf2;
+  background-color: #FF8A50;
   background-image: url(../images/icons/icon-play.svg);
   background-repeat: no-repeat;
   background-position: 55% center;
@@ -2190,7 +2190,7 @@ body.menu-is-open {
 }
 
 .home-content__video .video-link:hover .video-icon {
-  background-color: #6b3792;
+  background-color: #E67E3C;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2261,7 +2261,7 @@ body.menu-is-open {
 
 .home-content__scroll .scroll-link:hover,
 .home-content__scroll .scroll-link:focus {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .home-content__scroll::after {
@@ -2761,7 +2761,7 @@ html.no-csstransitions .home-content__main {
   font-weight: 700;
   text-align: center;
   color: #000;
-  background-color: #06ecf2;
+  background-color: #FF8A50;
   height: 48px;
   width: 48px;
   line-height: 48px;
@@ -2897,7 +2897,7 @@ html.no-csstransitions .home-content__main {
 
 .item-service__icon {
   float: left;
-  color: #06ecf2;
+  color: #FF8A50;
   font-size: 4.5rem;
   margin-top: -1.8rem;
 }
@@ -3310,7 +3310,7 @@ html.no-csstransitions .home-content__main {
 
 .clients a:hover,
 .clients a:focus {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .clients li {
@@ -3500,7 +3500,7 @@ html.no-csstransitions .home-content__main {
   line-height: 1.6;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .testimonials__author span {
@@ -3631,7 +3631,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-contact .subhead {
-  color: #06ecf2;
+  color: #FF8A50;
 }
 
 .s-contact .section-header,
