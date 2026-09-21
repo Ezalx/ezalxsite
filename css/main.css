@@ -77,13 +77,13 @@ body {
 }
 
 body {
-  background: #121212;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.7rem;
+  background: #F5F3F0;
+  font-family: "DM Sans", "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.941;
-  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.6;
+  color: #3a3a3a;
   margin: 0;
   padding: 0;
 }
@@ -91,8 +91,17 @@ body {
 /* ------------------------------------------------------------------- 
  * ## links
  * ------------------------------------------------------------------- */
+:root {
+  --color-primary: #F4A875;
+  --color-secondary: #7FBA9A;
+  --color-accent: #E67E3C;
+  --color-bg: #F5F3F0;
+  --color-text: #3a3a3a;
+  --color-text-light: #6b6b6b;
+}
+
 a {
-  color: #FF8A50;
+  color: var(--color-primary);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -2066,16 +2075,7 @@ body.menu-is-open {
 }
 
 .s-home::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #111111;
-  opacity: .7;
-  z-index: 2;
+  display: none;
 }
 
 .ai-core-container {
@@ -2099,19 +2099,7 @@ body.menu-is-open {
 }
 
 .s-home::after {
-  display: block;
-  content: "";
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2));
-  opacity: 1;
-  z-index: 4;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .s-home .grid-overlay > div {
@@ -2136,24 +2124,24 @@ body.menu-is-open {
 }
 
 .home-content h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 18rem;
-  line-height: 1;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 7.2rem;
+  line-height: 1.05;
   letter-spacing: -.02em;
-  color: #FFFFFF;
+  color: #3a3a3a;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .home-content h3 {
   margin-top: 1.2rem;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 300;
-  font-size: 3.8rem;
-  line-height: 1.342;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 1.4;
   font-style: normal;
-  color: #9c9c9c;
+  color: #6b6b6b;
 }
 
 .home-content__main {
@@ -2186,6 +2174,370 @@ body.menu-is-open {
   .ai-core-canvas {
     opacity: 0.2;
   }
+}
+
+/* ===================================================================
+ * LOVABLE DESIGN OVERRIDES - Nova Paleta e Layout
+ * =================================================================== */
+
+/* Header */
+.s-header {
+  background: rgba(245, 243, 240, 0.95) !important;
+  backdrop-filter: blur(10px);
+  position: fixed !important;
+  top: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-logo a {
+  color: #3a3a3a !important;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-nav__list a {
+  color: #3a3a3a !important;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.header-nav__list a:hover {
+  color: #F4A875 !important;
+}
+
+/* Hero Section */
+.s-home {
+  background: #F5F3F0 !important;
+  color: #3a3a3a;
+}
+
+.home-content__main {
+  text-align: left !important;
+  max-width: 620px;
+  margin-left: 8%;
+}
+
+.home-content__main h1 {
+  color: #3a3a3a !important;
+}
+
+.home-content__main h3 {
+  color: #6b6b6b !important;
+}
+
+.home-content__main p {
+  color: #6b6b6b !important;
+}
+
+/* Buttons */
+.home-content__button {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2.4rem;
+  background: none;
+}
+
+.home-content__button .btn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.home-content__button .btn--primary {
+  background: #F4A875 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.home-content__button .btn--primary:hover {
+  background: #E67E3C !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(244, 168, 117, 0.2);
+}
+
+.home-content__button .btn:not(.btn--primary) {
+  background: transparent !important;
+  color: #3a3a3a !important;
+  border: 1px solid rgba(58, 58, 58, 0.2) !important;
+}
+
+.home-content__button .btn:not(.btn--primary):hover {
+  border-color: #F4A875 !important;
+  color: #F4A875 !important;
+}
+
+.home-content__scroll a,
+.home-social a {
+  color: #3a3a3a !important;
+}
+
+.home-social a:hover {
+  color: #F4A875 !important;
+}
+
+/* AI Core Container */
+.ai-core-container {
+  background: rgba(244, 168, 117, 0.06) !important;
+  border-radius: 2rem;
+  margin: 4rem;
+  height: calc(100% - 8rem) !important;
+  width: calc(50% - 8rem) !important;
+}
+
+.ai-core-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(127, 186, 154, 0.15), transparent 70%);
+  border-radius: 2rem;
+  pointer-events: none;
+}
+
+/* Section header comum (Sobre, Serviços, Portfólio) */
+.section-header .subhead {
+  color: #F4A875 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.section-header .display-1 {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+}
+
+.lead {
+  color: #6b6b6b !important;
+}
+
+/* Seção Sobre */
+.s-about {
+  background: #F5F3F0 !important;
+}
+
+.item-process__text .item-title {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+  font-size: 1.9rem;
+}
+
+.item-process__text p {
+  color: #6b6b6b !important;
+}
+
+/* Seção de Serviços */
+.s-services {
+  background: #EFEBE5 !important;
+}
+
+.item-service {
+  background: white;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 3.2rem 2.8rem;
+  transition: all 0.3s ease;
+}
+
+.item-service:hover {
+  border-color: #F4A875;
+  box-shadow: 0 12px 24px rgba(244, 168, 117, 0.12);
+  transform: translateY(-4px);
+}
+
+.item-service__icon i {
+  color: #F4A875 !important;
+  font-size: 3.2rem;
+}
+
+.item-service__text .item-title {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+  font-size: 1.9rem;
+  margin-top: 1.2rem;
+}
+
+.item-service__text p {
+  color: #6b6b6b !important;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Portfólio/Works */
+.s-works {
+  background: #F5F3F0;
+}
+
+.s-works h2 {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+}
+
+.item-folio {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.item-folio:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.item-folio__title {
+  color: #3a3a3a !important;
+  font-size: 1.6rem;
+}
+
+.item-folio__cat {
+  color: #F4A875 !important;
+  font-size: 1.3rem;
+}
+
+/* FAQ */
+.s-faq {
+  background: #F5F3F0 !important;
+  color: #3a3a3a;
+}
+
+.s-faq .section-intro__title {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+}
+
+.s-faq .section-intro__overline {
+  color: #F4A875 !important;
+}
+
+.faq-toggle {
+  color: #3a3a3a !important;
+  font-weight: 600;
+}
+
+.faq-toggle:hover {
+  color: #F4A875 !important;
+  background: rgba(244, 168, 117, 0.08) !important;
+}
+
+.faq-toggle[aria-expanded="true"] {
+  color: #F4A875 !important;
+  background: rgba(244, 168, 117, 0.12) !important;
+}
+
+.faq-item {
+  border-color: rgba(244, 168, 117, 0.2) !important;
+  background: white;
+  border-radius: 1rem;
+}
+
+.faq-answer__content {
+  color: #6b6b6b !important;
+}
+
+/* Seção de Clientes */
+.s-clients {
+  background: #F5F3F0 !important;
+}
+
+.clients li a {
+  color: rgba(58, 58, 58, 0.5) !important;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.clients li a:hover {
+  color: #F4A875 !important;
+}
+
+/* Seção de Contato */
+.s-contact {
+  background: #3a3a3a !important;
+  color: #F5F3F0;
+}
+
+.s-contact .section-header .subhead {
+  color: #F4A875 !important;
+}
+
+.s-contact .section-header .display-1 {
+  color: #F5F3F0 !important;
+}
+
+.s-contact .lead {
+  color: rgba(245, 243, 240, 0.7) !important;
+}
+
+.contact-email a,
+.contact-address,
+.contact-numbers {
+  color: #F5F3F0 !important;
+}
+
+.contact-email a:hover {
+  color: #F4A875 !important;
+}
+
+.btn--primary {
+  background: #F4A875 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn--primary:hover {
+  background: #E67E3C !important;
+  transform: translateY(-2px);
+}
+
+.contact-social a {
+  color: #F5F3F0 !important;
+}
+
+.contact-social a:hover {
+  color: #F4A875 !important;
+}
+
+/* Contact/Footer */
+footer {
+  background: #3a3a3a;
+  color: #F5F3F0;
+  border-top: 1px solid rgba(244, 168, 117, 0.2);
+}
+
+.ss-copyright {
+  color: rgba(245, 243, 240, 0.7) !important;
+}
+
+.ss-go-top a {
+  color: #F4A875 !important;
+}
+
+.ss-go-top a:hover {
+  color: #E67E3C !important;
+}
+
+/* Tipografia Geral */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a3a3a !important;
+}
+
+.section-intro__title {
+  color: #3a3a3a !important;
+  font-family: "Fraunces", serif;
+}
+
+/* Transições suaves */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* FAQ Section
