@@ -41,22 +41,94 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "EZALX",
-  "url": "https://ezalx.netlify.app/",
-  "logo": "https://ezalx.netlify.app/images/ezalx-logo.svg",
-  "sameAs": [
-    "https://wa.me/5521996813723",
-    "https://www.instagram.com/ezalx/",
-    "https://www.youtube.com/@ezalx",
-    "https://www.linkedin.com/in/ezalx-aumumana/"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+55-21-996813723",
-    "contactType": "customer service",
-    "email": "ezal.pereira@gmail.com"
-  }
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ezalx.netlify.app/#business",
+      "name": "EZALX",
+      "url": "https://ezalx.netlify.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ezalx.netlify.app/images/ezalx-logo.svg",
+        "width": 200,
+        "height": 60
+      },
+      "description": "EZALX é especialista em criação de Websites, E-commerce e Branding. Soluções digitais completas e personalizadas.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+55-21-996813723",
+        "email": "ezal.pereira@gmail.com",
+        "areaServed": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ezalx/",
+        "https://www.youtube.com/@ezalx",
+        "https://www.linkedin.com/in/ezalx-aumumana/",
+        "https://wa.me/5521996813723"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR",
+        "addressLocality": "Rio de Janeiro"
+      },
+      "priceRange": "$$"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ezalx.netlify.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual é o tempo para criar um website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O tempo varia de acordo com a complexidade do projeto. Websites simples levam 15-30 dias, e-commerces podem levar 30-60 dias. Fazemos estimativas personalizadas após análise do seu projeto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês oferecem manutenção após a entrega?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Oferecemos planos de manutenção mensal que incluem atualizações, backups, segurança e suporte técnico contínuo para garantir que seu site funcione perfeitamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é feita a otimização para SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implementamos SEO on-page completo: meta tags, estrutura de headings, URLs amigáveis, sitemap, schema markup e otimização de velocidade. Também oferecemos consultoria de SEO técnico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso vender produtos internacionalmente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Desenvolvemos e-commerces com suporte multi-moeda, múltiplos idiomas e integrações com gateways internacionais de pagamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O website é responsivo para mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100% responsivo! Todos os nossos projetos são desenvolvidos com mobile-first approach e funcionam perfeitamente em qualquer dispositivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são as formas de pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aceitamos cartão de crédito, transferência bancária e PIX. Também oferecemos parcelamento em até 12 vezes sem juros para projetos maiores."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -89,6 +161,7 @@
                     <li><a class="smoothscroll"  href="#about" title="about" aria-label="Ir para seção Sobre">Sobre</a></li>
                     <li><a class="smoothscroll"  href="#services" title="services" aria-label="Ir para seção Serviços">Serviços</a></li>
                     <li><a class="smoothscroll"  href="#works" title="works" aria-label="Ir para seção Portfólio">Portifolio</a></li>
+                    <li><a class="smoothscroll"  href="#faq" title="faq" aria-label="Ir para seção FAQ">FAQ</a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact" aria-label="Ir para seção Contato">Contato</a></li>
                 </ul>
     
@@ -1109,7 +1182,103 @@
             </div>
         </div>
 
-    </section> <footer>
+    </section>
+
+    <section id="faq" class="s-faq target-section">
+
+        <div class="row section-intro has-anim-block" data-animate-block>
+            <div class="col-full">
+                <h3 class="section-intro__overline text-pretitle">FAQ</h3>
+                <h1 class="section-intro__title">Perguntas Frequentes</h1>
+                <p class="section-intro__desc">
+                    Respostas rápidas para suas dúvidas mais comuns sobre nossos serviços.
+                </p>
+            </div>
+        </div>
+
+        <div class="row faq-content">
+            <div class="col-full">
+                <div class="faq-accordion">
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">Qual é o tempo para criar um website?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>O tempo varia de acordo com a complexidade do projeto. Websites simples levam 15-30 dias, e-commerces podem levar 30-60 dias. Fazemos estimativas personalizadas após análise do seu projeto.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">Vocês oferecem manutenção após a entrega?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Sim! Oferecemos planos de manutenção mensal que incluem atualizações, backups, segurança e suporte técnico contínuo para garantir que seu site funcione perfeitamente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">Como é feita a otimização para SEO?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Implementamos SEO on-page completo: meta tags, estrutura de headings, URLs amigáveis, sitemap, schema markup e otimização de velocidade. Também oferecemos consultoria de SEO técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">Posso vender produtos internacionalmente?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Sim! Desenvolvemos e-commerces com suporte multi-moeda, múltiplos idiomas e integrações com gateways internacionais de pagamento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">O website é responsivo para mobile?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>100% responsivo! Todos os nossos projetos são desenvolvidos com mobile-first approach e funcionam perfeitamente em qualquer dispositivo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle" aria-expanded="false">
+                            <span class="faq-question">Quais são as formas de pagamento?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Aceitamos cartão de crédito, transferência bancária e PIX. Também oferecemos parcelamento em até 12 vezes sem juros para projetos maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
         <div class="row">
             <div class="col-full ss-copyright">
                 <span>CNPJ 50.538.516/0001-62 © Todos os direitos reservados 2023</span> 

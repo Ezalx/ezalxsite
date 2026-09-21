@@ -218,7 +218,7 @@
    /* Animate On Scroll
     * ------------------------------------------------------ */
     var ssAOS = function() {
-        
+
         AOS.init( {
             offset: 200,
             duration: 600,
@@ -228,6 +228,41 @@
             disable: 'mobile'
         });
 
+    };
+
+
+   /* FAQ Accordion
+    * ------------------------------------------------------ */
+    var ssFAQAccordion = function() {
+
+        var faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                var isExpanded = this.getAttribute('aria-expanded') === 'true';
+                var faqItem = this.parentElement;
+                var answer = faqItem.querySelector('.faq-answer');
+
+                // Close all other items
+                document.querySelectorAll('.faq-toggle').forEach(function(t) {
+                    if (t !== toggle) {
+                        t.setAttribute('aria-expanded', 'false');
+                        t.parentElement.querySelector('.faq-answer').style.maxHeight = '0';
+                    }
+                });
+
+                // Toggle current item
+                if (isExpanded) {
+                    this.setAttribute('aria-expanded', 'false');
+                    answer.style.maxHeight = '0';
+                } else {
+                    this.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
     };
 
 
@@ -244,6 +279,7 @@
         ssSmoothScroll();
         ssAlertBoxes();
         ssAOS();
+        ssFAQAccordion();
 
     })();
 
