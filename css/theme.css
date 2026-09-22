@@ -1,0 +1,542 @@
+/* ===================================================================
+ * EZALX — Theme v2 (Dark / Tech / Orange)
+ * Design system completo, construído do zero.
+ * Carregado depois de main.css — sobrescreve o visual mantendo
+ * a estrutura HTML e o comportamento JS do template original.
+ * =================================================================== */
+
+:root {
+  /* Superfícies */
+  --bg: #0a0a0b;
+  --bg-alt: #121214;
+  --surface: #18181b;
+  --surface-2: #1e1e22;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Texto */
+  --text: #f5f5f4;
+  --text-muted: rgba(245, 245, 244, 0.62);
+  --text-faint: rgba(245, 245, 244, 0.4);
+
+  /* Marca */
+  --orange: #FF8A50;
+  --orange-dark: #E67E3C;
+  --orange-glow: rgba(255, 138, 80, 0.16);
+
+  /* Tipografia */
+  --font-head: "Montserrat", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+
+  /* Espaçamento de seção */
+  --section-pad: 12rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 7rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------- */
+html, body {
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+}
+
+::selection {
+  background: var(--orange);
+  color: #0a0a0b;
+}
+
+a {
+  color: var(--orange);
+}
+
+a:hover,
+a:focus {
+  color: var(--orange-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head);
+  color: var(--text);
+}
+
+/* -------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------- */
+.s-header {
+  background: rgba(10, 10, 11, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-logo img {
+  height: 34px;
+  width: auto;
+}
+
+.header-nav__list a {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.header-nav__list a:hover {
+  color: var(--orange);
+}
+
+.header-nav {
+  background: #0d0d0f;
+}
+
+.header-nav__content p a {
+  color: var(--orange);
+}
+
+/* -------------------------------------------------------------------
+ * Buttons
+ * ------------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-head);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.btn--primary,
+.btn--stroke {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #0a0a0b !important;
+}
+
+.btn--primary:hover,
+.btn--stroke:hover {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px var(--orange-glow);
+}
+
+.home-content__button .btn:not(.btn--primary) {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text) !important;
+}
+
+.home-content__button .btn:not(.btn--primary):hover {
+  border-color: var(--orange);
+  color: var(--orange) !important;
+  background: transparent;
+}
+
+/* -------------------------------------------------------------------
+ * Section header (subhead / display-1 / lead) — usado em quase
+ * todas as seções (about, services, works, clients, contact)
+ * ------------------------------------------------------------------- */
+.section-header .subhead {
+  color: var(--orange);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-header .display-1 {
+  color: var(--text);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.25;
+  max-width: 820px;
+  margin-top: 1.6rem;
+}
+
+.section-header.text-center .display-1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lead {
+  color: var(--text-muted);
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-header .display-1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * Hero
+ * ------------------------------------------------------------------- */
+.s-home {
+  background: var(--bg);
+}
+
+.s-home::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 30% 45%, black 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 90% 70% at 30% 45%, black 0%, transparent 75%);
+}
+
+.s-home::after {
+  display: none;
+}
+
+.ai-core-container {
+  z-index: 2;
+}
+
+.home-content h1 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 8.4rem;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  background: linear-gradient(120deg, #ffffff 0%, #ffffff 55%, var(--orange) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-content h3 {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.home-content__main {
+  text-align: left;
+  max-width: 640px;
+  margin-left: 9%;
+}
+
+.home-content__button {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.home-content__scroll a {
+  color: var(--text-faint);
+}
+
+.home-social a {
+  color: var(--text-faint);
+}
+
+.home-social a:hover {
+  color: var(--orange);
+}
+
+@media (max-width: 1000px) {
+  .home-content h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-content__main {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 4.6rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * darker sections (services, clients)
+ * ------------------------------------------------------------------- */
+.target-section.darker {
+  background: var(--bg-alt);
+}
+
+/* -------------------------------------------------------------------
+ * About / Process
+ * ------------------------------------------------------------------- */
+.s-about {
+  background: var(--bg);
+}
+
+.item-process {
+  padding: 2.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.item-process:hover {
+  border-color: var(--orange);
+  transform: translateY(-4px);
+}
+
+.item-process__text .item-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.item-process__text p {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-top: 0.8rem;
+}
+
+/* -------------------------------------------------------------------
+ * Services
+ * ------------------------------------------------------------------- */
+.item-service {
+  padding: 3.2rem 2.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item-service:hover {
+  border-color: var(--orange);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+.item-service__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--orange-glow);
+  margin-bottom: 2rem;
+}
+
+.item-service__icon i {
+  color: var(--orange);
+  font-size: 2.4rem;
+}
+
+.item-service__text .item-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.item-service__text p {
+  color: var(--text-muted);
+  font-size: 1.45rem;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------------------
+ * Works / Portfolio
+ * ------------------------------------------------------------------- */
+.s-works {
+  background: var(--bg);
+}
+
+.item-folio {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.item-folio:hover {
+  border-color: var(--orange);
+  transform: translateY(-4px);
+}
+
+.item-folio__title {
+  color: var(--text);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.item-folio__cat {
+  color: var(--text-faint);
+  font-size: 1.3rem;
+}
+
+.item-folio__project-link {
+  color: var(--orange);
+}
+
+/* -------------------------------------------------------------------
+ * Clients
+ * ------------------------------------------------------------------- */
+.s-clients {
+  background: var(--bg-alt);
+}
+
+.clients li a {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--text-faint);
+}
+
+.clients li a:hover {
+  color: var(--orange);
+}
+
+/* -------------------------------------------------------------------
+ * FAQ
+ * ------------------------------------------------------------------- */
+.s-faq {
+  background: var(--bg);
+}
+
+.s-faq .section-intro__overline {
+  color: var(--orange);
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.s-faq .section-intro__title {
+  color: var(--text);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 3.6rem;
+  margin-top: 1.2rem;
+}
+
+.s-faq .section-intro__desc {
+  color: var(--text-muted);
+  font-size: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.faq-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: none;
+}
+
+.faq-toggle {
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.faq-toggle:hover {
+  color: var(--orange);
+  background: rgba(255, 138, 80, 0.06);
+}
+
+.faq-toggle[aria-expanded="true"] {
+  color: var(--orange);
+  background: rgba(255, 138, 80, 0.08);
+}
+
+.faq-answer__content {
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------
+ * Contact
+ * ------------------------------------------------------------------- */
+.s-contact {
+  background: var(--bg-alt);
+}
+
+.contact-email a {
+  color: var(--text);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 3rem;
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 4px;
+}
+
+.contact-email a:hover {
+  color: var(--orange);
+}
+
+.contact-address,
+.contact-numbers {
+  color: var(--text-faint);
+}
+
+.contact-social a {
+  color: var(--text-faint);
+}
+
+.contact-social a:hover {
+  color: var(--orange);
+}
+
+/* -------------------------------------------------------------------
+ * Footer
+ * ------------------------------------------------------------------- */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.ss-copyright span {
+  color: var(--text-faint);
+}
+
+.ss-go-top a {
+  color: var(--orange);
+  font-family: var(--font-head);
+  font-weight: 600;
+}
+
+.ss-go-top a:hover {
+  color: var(--orange-dark);
+}
+
+/* -------------------------------------------------------------------
+ * Grid overlay dots — deixa mais discreto no tema novo
+ * ------------------------------------------------------------------- */
+.grid-overlay > div {
+  background-color: var(--orange);
+  opacity: 0.5;
+}
