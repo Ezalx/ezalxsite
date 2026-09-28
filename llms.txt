@@ -1,0 +1,43 @@
+# EZALX
+
+> EZALX é uma agência digital do Rio de Janeiro (CNPJ 50.538.516/0001-62) especializada em criação de sites e e-commerces, SEO, GEO (otimização para buscas com inteligência artificial), gestão de redes sociais, produção de Reels e vídeos, branding e segurança digital.
+
+A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e lojas virtuais, posiciona empresas no Google e nas buscas com IA (ChatGPT, Gemini, Perplexity e respostas com IA do Google) e cuida da presença nas redes sociais, da estratégia ao conteúdo. Oferece suporte contínuo depois da entrega.
+
+## Serviços
+
+- Sites e e-commerce: sites institucionais, landing pages e lojas virtuais em WordPress, WooCommerce, Shopify, Nuvemshop, Irroba e Wix.
+- SEO: otimização técnica, SEO on-page e off-page, pesquisa de palavras-chave, dados estruturados, velocidade e construção de autoridade.
+- GEO (Generative Engine Optimization): site, dados estruturados e conteúdo preparados para que assistentes e buscadores com IA entendam, citem e recomendem a marca.
+- Social media: planejamento, criação, edição e publicação de conteúdo e estratégia digital para redes sociais.
+- Reels e vídeo: edição de vídeos para Reels, TikTok e Shorts; vinhetas para mídia indoor.
+- Branding e identidade visual: logos e identidades visuais sob medida.
+- Segurança digital e suporte: diagnóstico, remoção de vírus e malware, proteção de dados, manutenção, backups e suporte técnico.
+
+## Portfólio (seleção)
+
+- [Lan Maritime Lab](https://lanmaritimelab.com/): site institucional em WordPress
+- [Ponytail](https://www.ponytail.com.br/): e-commerce na plataforma Irroba
+- [Galeria Surf](https://www.galeriasurf.com/): e-commerce na Nuvemshop
+- [PH Advocacia](https://phadvocacia.com/): site para escritório de advocacia
+- [Master Med](https://mastermedsst.com.br/): site institucional em WordPress
+- [Hamilton de Holanda](https://hamiltondeholanda.com/): site em WordPress
+- [Instituto Mar Urbano](https://institutomarurbano.com.br/): site, suporte e atualização de conteúdo contínuos
+- [Bibi Sucos](https://www.bibisucos.com.br/): site e vinhetas para mídia indoor
+
+## Perguntas frequentes
+
+- Prazo: websites simples levam de 15 a 30 dias; e-commerces, de 30 a 60 dias.
+- Manutenção: planos mensais com atualizações, backups, segurança e suporte técnico.
+- Pagamento: cartão de crédito, transferência bancária e PIX; parcelamento em até 12 vezes sem juros para projetos maiores.
+- Todos os sites são responsivos e desenvolvidos pensando primeiro no celular.
+
+## Contato
+
+- Site: https://ezalx.netlify.app/
+- WhatsApp: +55 21 99681-3723 (https://wa.me/5521996813723)
+- E-mail: ezal.pereira@gmail.com
+- Instagram: https://www.instagram.com/ezalx/
+- LinkedIn: https://www.linkedin.com/in/ezalx-aumumana/
+- YouTube: https://www.youtube.com/@ezalx_vid8146
+- Localização: Rio de Janeiro, RJ, Brasil
