@@ -102,6 +102,8 @@
                     "GEO (Generative Engine Optimization)",
                     "Gestão de redes sociais",
                     "Produção de Reels e vídeos",
+                    "Criação de comunidades nas redes sociais",
+                    "Parcerias com marcas",
                     "Branding e identidade visual",
                     "Segurança digital",
                     "WordPress",
@@ -150,6 +152,7 @@
                     { "@type": "Question", "name": "Como a EZALX faz o SEO do meu site?", "acceptedAnswer": { "@type": "Answer", "text": "Implementamos SEO on-page completo: meta tags, estrutura de títulos, URLs amigáveis, sitemap, dados estruturados (schema) e otimização de velocidade. Também fazemos pesquisa de palavras-chave, construção de autoridade e consultoria de SEO técnico." } },
                     { "@type": "Question", "name": "O que é GEO e por que minha empresa precisa disso?", "acceptedAnswer": { "@type": "Answer", "text": "GEO (Generative Engine Optimization) é a otimização para buscas feitas com inteligência artificial, como ChatGPT, Gemini, Perplexity e as respostas com IA do Google. Cada vez mais pessoas pedem recomendações a essas ferramentas. O GEO organiza o site, os dados estruturados e o conteúdo da sua marca para que ela seja entendida, citada e recomendada nessas respostas." } },
                     { "@type": "Question", "name": "Vocês cuidam das redes sociais da minha empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Fazemos planejamento, criação de conteúdo, edição de Reels e vídeos, publicação e estratégia digital para construir presença, relacionamento e autoridade nas redes sociais." } },
+                    { "@type": "Question", "name": "A EZALX tem experiência própria com redes sociais?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O fundador da EZALX criou em 2014 o Rio Surf Check (@riosurfcheck), perfil de informes de surfe do Rio de Janeiro com mais de 154 mil seguidores no Instagram, 54 mil no TikTok e 24 mil no Facebook, que faz parcerias com diversas marcas. Essa experiência prática é aplicada na estratégia de redes sociais dos nossos clientes." } },
                     { "@type": "Question", "name": "Posso vender produtos internacionalmente?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Desenvolvemos e-commerces com suporte a várias moedas, vários idiomas e integração com gateways internacionais de pagamento." } },
                     { "@type": "Question", "name": "O site funciona bem no celular?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, 100% responsivo. Todos os projetos são desenvolvidos pensando primeiro no celular e funcionam em qualquer dispositivo." } },
                     { "@type": "Question", "name": "Quais são as formas de pagamento?", "acceptedAnswer": { "@type": "Answer", "text": "Aceitamos cartão de crédito, transferência bancária e PIX. Também oferecemos parcelamento em até 12 vezes sem juros para projetos maiores." } }
@@ -346,7 +349,7 @@
 
         .logo span { color: var(--accent); }
 
-        .nav-menu { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-menu { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 32px); list-style: none; }
 
         .nav-menu a { font-size: 14px; font-weight: 500; color: var(--text-2); position: relative; }
 
@@ -570,6 +573,139 @@
             .service { padding: 24px; }
             .service--wide { grid-template-columns: 1fr; }
             .service--wide .tags { justify-content: flex-start; padding-top: 8px; }
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-text);
+        }
+
+        .service-link:hover { text-decoration: underline; }
+
+        /* === SOCIAL MEDIA === */
+        .social { background: var(--surface); }
+
+        .social-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(40px, 6vw, 88px); align-items: center; }
+
+        .social-text > p:not(.eyebrow) { margin-top: 20px; font-size: 17px; line-height: 1.8; color: var(--text-2); }
+        .social-text strong { color: var(--fg); }
+
+        .checks { display: grid; gap: 12px; margin-top: 28px; list-style: none; }
+
+        .checks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500; }
+
+        .checks li::before {
+            content: '✓';
+            flex: none;
+            display: grid;
+            place-items: center;
+            width: 22px;
+            height: 22px;
+            margin-top: 1px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .profile-card {
+            padding: clamp(20px, 3vw, 32px);
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-head { display: flex; align-items: center; gap: 16px; }
+
+        .avatar {
+            flex: none;
+            display: grid;
+            place-items: center;
+            width: 64px;
+            height: 64px;
+            padding: 3px;
+            border-radius: 50%;
+            background: conic-gradient(from 200deg, var(--accent), #0a0a0a, var(--accent));
+        }
+
+        .avatar span {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--bg);
+            border-radius: 50%;
+            background: #0a0a0a;
+            color: var(--accent);
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .profile-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; line-height: 1.2; }
+        .profile-handle { font-size: 14px; color: var(--muted); }
+
+        .profile-since {
+            margin-left: auto;
+            padding: 4px 12px;
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-text);
+            white-space: nowrap;
+        }
+
+        .profile-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+
+        .stat-box { display: flex; flex-direction: column-reverse; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); }
+        .stat-box dd { font-family: var(--font-display); font-size: clamp(26px, 3vw, 34px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+        .stat-box dt { margin-top: 4px; font-size: 13px; color: var(--muted); }
+
+        .profile-total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 12px;
+            padding: 18px;
+            border-radius: var(--radius);
+            background: #0a0a0a;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .profile-total strong { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; color: var(--accent); }
+
+        .profile-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; list-style: none; }
+
+        .profile-links a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 0 14px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .profile-links a:hover { border-color: var(--accent); color: var(--accent-text); }
+
+        @media (max-width: 960px) {
+            .social-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 400px) {
+            .profile-head { flex-wrap: wrap; }
+            .profile-since { margin-left: 80px; }
+            .stat-box { padding: 14px; }
         }
 
         /* === PORTFOLIO === */
@@ -831,6 +967,7 @@
             <nav aria-label="Navegação principal">
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#redes-sociais">Redes sociais</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#faq">Dúvidas</a></li>
@@ -905,6 +1042,7 @@
                         <p class="service-kicker">04 · Redes sociais</p>
                         <h3>Social Media</h3>
                         <p>Planejamento, criação, edição e publicação de conteúdo para construir presença, relacionamento e autoridade nas redes sociais.</p>
+                        <a class="service-link" href="#redes-sociais">Veja nossa experiência: 230 mil+ seguidores →</a>
                         <ul class="tags"><li>Planejamento</li><li>Conteúdo</li><li>Publicação</li><li>Estratégia</li></ul>
                     </article>
                     <article class="service">
@@ -927,6 +1065,54 @@
                         </div>
                         <ul class="tags"><li>Diagnóstico</li><li>Remoção de ameaças</li><li>Backups</li><li>Suporte técnico</li></ul>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL MEDIA -->
+        <section class="section social" id="redes-sociais" aria-labelledby="redes-title">
+            <div class="container social-grid">
+                <div class="social-text">
+                    <p class="eyebrow">Redes sociais na prática</p>
+                    <h2 id="redes-title">Mais de 230&nbsp;mil seguidores construídos do zero.</h2>
+                    <p>Em 2014, o fundador da EZALX criou o <strong>Rio Surf Check</strong>, perfil de informes de surfe do Rio de Janeiro. Mais de uma década depois, são mais de 101 mil publicações, uma comunidade de mais de 230 mil seguidores no Instagram, TikTok e Facebook e parcerias com diversas marcas.</p>
+                    <p>É essa experiência de criar conteúdo todos os dias, engajar uma comunidade e entregar resultado para marcas parceiras que aplicamos na estratégia de redes sociais dos nossos clientes.</p>
+                    <ul class="checks">
+                        <li>Conteúdo diário e consistente desde 2014</li>
+                        <li>Comunidade engajada que participa e colabora</li>
+                        <li>Parcerias e ações com diversas marcas</li>
+                        <li>Reels, vídeos e informes em tempo real</li>
+                    </ul>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="https://wa.me/5521996813723?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20crescer%20nas%20redes%20sociais." target="_blank" rel="noopener" data-location="social">Quero crescer nas redes</a>
+                        <a class="btn btn-ghost" href="https://www.instagram.com/riosurfcheck/" target="_blank" rel="noopener">Ver @riosurfcheck</a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-head">
+                        <span class="avatar" aria-hidden="true"><span>RSC</span></span>
+                        <div>
+                            <p class="profile-name">Rio Surf Check</p>
+                            <p class="profile-handle">@riosurfcheck</p>
+                        </div>
+                        <span class="profile-since">Desde 2014</span>
+                    </div>
+                    <dl class="profile-stats">
+                        <div class="stat-box"><dt>Seguidores no Instagram</dt><dd>154&nbsp;mil+</dd></div>
+                        <div class="stat-box"><dt>Seguidores no TikTok</dt><dd>54&nbsp;mil+</dd></div>
+                        <div class="stat-box"><dt>Seguidores no Facebook</dt><dd>24&nbsp;mil+</dd></div>
+                        <div class="stat-box"><dt>Publicações no Instagram</dt><dd>101&nbsp;mil+</dd></div>
+                    </dl>
+                    <div class="profile-total">
+                        <span>Seguidores somados</span>
+                        <strong>230&nbsp;mil+</strong>
+                    </div>
+                    <ul class="profile-links" aria-label="Perfis do Rio Surf Check">
+                        <li><a href="https://www.instagram.com/riosurfcheck/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@riosurfcheck" target="_blank" rel="noopener">TikTok</a></li>
+                        <li><a href="https://www.facebook.com/riosurfcheck/" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/@RIOSURFCHECKTV" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1094,6 +1280,10 @@
                         <p>Sim. Fazemos planejamento, criação de conteúdo, edição de Reels e vídeos, publicação e estratégia digital para construir presença, relacionamento e autoridade nas redes sociais.</p>
                     </details>
                     <details>
+                        <summary>A EZALX tem experiência própria com redes sociais?</summary>
+                        <p>Sim. O fundador da EZALX criou em 2014 o Rio Surf Check (@riosurfcheck), perfil de informes de surfe do Rio de Janeiro com mais de 154 mil seguidores no Instagram, 54 mil no TikTok e 24 mil no Facebook, que faz parcerias com diversas marcas. Essa experiência prática é aplicada na estratégia de redes sociais dos nossos clientes.</p>
+                    </details>
+                    <details>
                         <summary>Posso vender produtos internacionalmente?</summary>
                         <p>Sim. Desenvolvemos e-commerces com suporte a várias moedas, vários idiomas e integração com gateways internacionais de pagamento.</p>
                     </details>
@@ -1135,6 +1325,7 @@
                     <h2 class="footer-title" id="footer-nav-title">Navegação</h2>
                     <ul class="footer-list">
                         <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#redes-sociais">Redes sociais</a></li>
                         <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#faq">Dúvidas</a></li>
