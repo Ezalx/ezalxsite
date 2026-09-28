@@ -93,7 +93,7 @@
                 "sameAs": [
                     "https://www.instagram.com/ezalx/",
                     "https://www.linkedin.com/in/ezalx-aumumana/",
-                    "https://www.youtube.com/@ezalx_vid8146"
+                    "https://www.youtube.com/@ezalx"
                 ],
                 "knowsAbout": [
                     "Criação de sites",
@@ -666,7 +666,8 @@
             list-style: none;
         }
 
-        .clients-list li {
+        .clients-list a,
+        .clients-list span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -682,9 +683,11 @@
             border-radius: var(--radius);
         }
 
+        .clients-list a:hover { border-color: var(--accent); color: var(--accent-text); background: var(--bg); }
+
         @media (max-width: 480px) {
             .clients-list { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-            .clients-list li { min-height: 60px; font-size: 14px; padding: 12px; }
+            .clients-list a, .clients-list span { min-height: 60px; font-size: 14px; padding: 12px; }
         }
 
         /* === FAQ === */
@@ -941,7 +944,7 @@
                         <img src="images/portfolio/lan-maritime-lab-pt.webp" alt="Site institucional da Lan Maritime Lab criado pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site institucional · WordPress</span><span class="project-title">Lan Maritime Lab</span></span>
                     </a>
-                    <a class="project" href="https://www.ponytail.com.br/" target="_blank" rel="noopener">
+                    <a class="project" href="https://ponytail.com.br/" target="_blank" rel="noopener">
                         <img src="images/portfolio/ponytail.webp" alt="Loja virtual da Ponytail desenvolvida pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">E-commerce · Irroba</span><span class="project-title">Ponytail</span></span>
                     </a>
@@ -965,7 +968,7 @@
                         <img src="images/portfolio/institutomarurbano.webp" alt="Site do Instituto Mar Urbano mantido pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site + conteúdo contínuo</span><span class="project-title">Instituto Mar Urbano</span></span>
                     </a>
-                    <a class="project" href="https://www.bibisucos.com.br/" target="_blank" rel="noopener">
+                    <a class="project" href="https://bibisucos.com.br/" target="_blank" rel="noopener">
                         <img src="images/portfolio/bibisucos.webp" alt="Site da Bibi Sucos mantido pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site &amp; mídia indoor</span><span class="project-title">Bibi Sucos</span></span>
                     </a>
@@ -1039,24 +1042,24 @@
                     <h2 id="clientes-title">Marcas que confiam na EZALX.</h2>
                 </div>
                 <ul class="clients-list">
-                    <li>Margaux Eyewear</li>
-                    <li>Lan Maritime Lab</li>
-                    <li>E-novasys</li>
-                    <li>PH Advocacia</li>
-                    <li>Instituto Mar Urbano</li>
-                    <li>Galeria Surf</li>
-                    <li>Riomarmores</li>
-                    <li>Inti</li>
-                    <li>Ponytail</li>
-                    <li>Master Med</li>
-                    <li>Riodesc</li>
-                    <li>Criamente</li>
-                    <li>Costa Blanca Films</li>
-                    <li>Grande Peixe</li>
-                    <li>Lafontaine Bags</li>
-                    <li>MagicBrain AI</li>
-                    <li>Rio Surf Tech</li>
-                    <li>Galeria Movimento</li>
+                    <li><a href="https://margauxeyewear.com/" target="_blank" rel="noopener">Margaux Eyewear</a></li>
+                    <li><a href="https://lanmaritimelab.com/" target="_blank" rel="noopener">Lan Maritime Lab</a></li>
+                    <li><a href="https://enovasys.net.br/" target="_blank" rel="noopener">E-novasys</a></li>
+                    <li><a href="https://phadvocacia.com/" target="_blank" rel="noopener">PH Advocacia</a></li>
+                    <li><a href="https://institutomarurbano.com.br/" target="_blank" rel="noopener">Instituto Mar Urbano</a></li>
+                    <li><a href="https://www.galeriasurf.com/" target="_blank" rel="noopener">Galeria Surf</a></li>
+                    <li><a href="https://riomarmores.com.br/" target="_blank" rel="noopener">Riomarmores</a></li>
+                    <li><a href="https://inti.rio/" target="_blank" rel="noopener">Inti</a></li>
+                    <li><a href="https://ponytail.com.br/" target="_blank" rel="noopener">Ponytail</a></li>
+                    <li><a href="https://mastermedsst.com.br/" target="_blank" rel="noopener">Master Med</a></li>
+                    <li><a href="https://www.riodesc.com.br/" target="_blank" rel="noopener">Riodesc</a></li>
+                    <li><a href="https://criamente.com/" target="_blank" rel="noopener">Criamente</a></li>
+                    <li><a href="https://costablancafilms.com/" target="_blank" rel="noopener">Costa Blanca Films</a></li>
+                    <li><a href="https://grandepeixe.com/" target="_blank" rel="noopener">Grande Peixe</a></li>
+                    <li><span>Lafontaine Bags</span></li>
+                    <li><a href="https://magicbrain.ai/" target="_blank" rel="noopener">MagicBrain AI</a></li>
+                    <li><a href="https://riosurftech.com.br/" target="_blank" rel="noopener">Rio Surf Tech</a></li>
+                    <li><a href="https://www.galeriamovimento.com.br/" target="_blank" rel="noopener">Galeria Movimento</a></li>
                 </ul>
             </div>
         </section>
@@ -1150,7 +1153,7 @@
                     <ul class="footer-list">
                         <li><a href="https://www.instagram.com/ezalx/" target="_blank" rel="noopener">Instagram</a></li>
                         <li><a href="https://www.linkedin.com/in/ezalx-aumumana/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/@ezalx_vid8146" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.youtube.com/@ezalx" target="_blank" rel="noopener">YouTube</a></li>
                     </ul>
                 </div>
             </div>

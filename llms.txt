@@ -17,13 +17,13 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 ## Portfólio (seleção)
 
 - [Lan Maritime Lab](https://lanmaritimelab.com/): site institucional em WordPress
-- [Ponytail](https://www.ponytail.com.br/): e-commerce na plataforma Irroba
+- [Ponytail](https://ponytail.com.br/): e-commerce na plataforma Irroba
 - [Galeria Surf](https://www.galeriasurf.com/): e-commerce na Nuvemshop
 - [PH Advocacia](https://phadvocacia.com/): site para escritório de advocacia
 - [Master Med](https://mastermedsst.com.br/): site institucional em WordPress
 - [Hamilton de Holanda](https://hamiltondeholanda.com/): site em WordPress
 - [Instituto Mar Urbano](https://institutomarurbano.com.br/): site, suporte e atualização de conteúdo contínuos
-- [Bibi Sucos](https://www.bibisucos.com.br/): site e vinhetas para mídia indoor
+- [Bibi Sucos](https://bibisucos.com.br/): site e vinhetas para mídia indoor
 
 ## Perguntas frequentes
 
@@ -39,5 +39,5 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 - E-mail: ezal.pereira@gmail.com
 - Instagram: https://www.instagram.com/ezalx/
 - LinkedIn: https://www.linkedin.com/in/ezalx-aumumana/
-- YouTube: https://www.youtube.com/@ezalx_vid8146
+- YouTube: https://www.youtube.com/@ezalx
 - Localização: Rio de Janeiro, RJ, Brasil
