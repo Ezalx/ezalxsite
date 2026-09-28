@@ -23,11 +23,13 @@
     <meta property="og:description" content="Criamos websites, e-commerces e soluções digitais que transformam visitantes em clientes.">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="EZALX">
+    <meta property="og:image" content="https://ezalx.netlify.app/ezalx.png">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EZALX — Agência Digital">
     <meta name="twitter:description" content="Websites, e-commerces e soluções digitais estratégicas.">
+    <meta name="twitter:image" content="https://ezalx.netlify.app/ezalx.png">
 
     <!-- CANONICAL & LINKS -->
     <link rel="canonical" href="https://ezalx.netlify.app/">
@@ -335,6 +337,11 @@
             border: 2px solid var(--gray-border);
             color: var(--fg);
             padding: 12px 28px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: var(--radius);
+            display: inline-block;
         }
 
         .hero-cta .secondary:hover {
@@ -502,6 +509,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--spacing-lg);
             grid-auto-rows: 300px;
+            grid-auto-flow: dense;
         }
 
         .project {
@@ -511,7 +519,7 @@
             border-radius: var(--radius);
             background: var(--gray-light);
             cursor: pointer;
-            group: 1;
+            display: block;
             transition: var(--transition);
         }
 
@@ -538,12 +546,27 @@
             flex-direction: column;
             justify-content: flex-end;
             padding: var(--spacing-lg);
-            opacity: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 75%);
             transition: var(--transition);
         }
 
-        .project:hover .project-overlay {
-            opacity: 1;
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project:hover img,
+        .project:focus-visible img {
+            transform: scale(1.04);
+        }
+
+        .project:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         .project-title {
@@ -653,7 +676,7 @@
         }
 
         .stat-value {
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--accent);
             margin-bottom: var(--spacing-xs);
@@ -842,8 +865,8 @@
                 <h1>Tecnologia, criatividade e estratégia em harmonia.</h1>
                 <p>Criamos soluções digitais que transformam visitantes em clientes. Sites, e-commerces, segurança e conteúdo de impacto.</p>
                 <div class="hero-cta">
-                    <button aria-label="Iniciar um novo projeto">Começar Projeto</button>
-                    <button class="secondary" aria-label="Assistir demonstração em vídeo">Assistir Demo</button>
+                    <button class="cta-btn" aria-label="Começar um projeto pelo WhatsApp">Começar Projeto</button>
+                    <a href="#portfolio" class="secondary">Ver Trabalhos</a>
                 </div>
             </div>
             <div class="hero-visual" aria-label="Elemento visual decorativo com grid">
@@ -899,48 +922,90 @@
             <h2>Nossos Trabalhos</h2>
             <p class="portfolio-intro">Projetos que transformam marcas em referências digitais. Cada trabalho reflete estratégia, criatividade e excelência técnica.</p>
             <div class="portfolio-grid" role="region" aria-label="Galeria de projetos">
-                <article class="project" aria-label="Projeto Lan Maritime Lab, website WordPress">
+                <a class="project" href="https://lanmaritimelab.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/lan-maritime-lab-pt.webp" alt="Website da Lan Maritime Lab" loading="lazy">
                     <div class="project-overlay">
-                        <div class="project-type">WordPress</div>
+                        <div class="project-type">Website WordPress</div>
                         <div class="project-title">Lan Maritime Lab</div>
                     </div>
-                </article>
-                <article class="project" aria-label="Projeto Criamente, customização CSS/JS">
+                </a>
+                <a class="project" href="https://www.ponytail.com.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/ponytail.webp" alt="E-commerce da Ponytail" loading="lazy">
                     <div class="project-overlay">
-                        <div class="project-type">Customização</div>
-                        <div class="project-title">Criamente</div>
-                    </div>
-                </article>
-                <article class="project" aria-label="Projeto PH Advocacia, website WordPress">
-                    <div class="project-overlay">
-                        <div class="project-type">WordPress</div>
-                        <div class="project-title">PH Advocacia</div>
-                    </div>
-                </article>
-                <article class="project" aria-label="Projeto Ponytail, e-commerce">
-                    <div class="project-overlay">
-                        <div class="project-type">E-commerce</div>
+                        <div class="project-type">E-commerce · Irroba</div>
                         <div class="project-title">Ponytail</div>
                     </div>
-                </article>
-                <article class="project" aria-label="Projeto Galeria Surf, e-commerce">
+                </a>
+                <a class="project" href="https://phadvocacia.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/pha.webp" alt="Website da PH Advocacia" loading="lazy">
                     <div class="project-overlay">
-                        <div class="project-type">E-commerce</div>
+                        <div class="project-type">Website</div>
+                        <div class="project-title">PH Advocacia</div>
+                    </div>
+                </a>
+                <a class="project" href="https://criamente.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/criamente.webp" alt="Website da Criamente" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Animações CSS/JS</div>
+                        <div class="project-title">Criamente</div>
+                    </div>
+                </a>
+                <a class="project" href="https://www.galeriasurf.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/galeria-surf.webp" alt="E-commerce da Galeria Surf" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">E-commerce · Nuvemshop</div>
                         <div class="project-title">Galeria Surf</div>
                     </div>
-                </article>
-                <article class="project" aria-label="Projeto Master Med, website WordPress">
+                </a>
+                <a class="project" href="https://mastermedsst.com.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/mastermed.webp" alt="Website da Master Med" loading="lazy">
                     <div class="project-overlay">
-                        <div class="project-type">WordPress</div>
+                        <div class="project-type">Website WordPress</div>
                         <div class="project-title">Master Med</div>
                     </div>
-                </article>
-                <article class="project" aria-label="Projeto Instituto Mar Urbano, branding">
+                </a>
+                <a class="project" href="https://institutomarurbano.com.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/institutomarurbano.webp" alt="Website do Instituto Mar Urbano" loading="lazy">
                     <div class="project-overlay">
-                        <div class="project-type">Branding</div>
+                        <div class="project-type">Website · Cliente fixo</div>
                         <div class="project-title">Instituto Mar Urbano</div>
                     </div>
-                </article>
+                </a>
+                <a class="project" href="https://hamiltondeholanda.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/hamilton-de-holanda.webp" alt="Website do Hamilton de Holanda" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Website WordPress</div>
+                        <div class="project-title">Hamilton de Holanda</div>
+                    </div>
+                </a>
+                <a class="project" href="https://www.bibisucos.com.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/bibisucos.webp" alt="Website do Bibi Sucos" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Website & Mídia Indoor</div>
+                        <div class="project-title">Bibi Sucos</div>
+                    </div>
+                </a>
+                <a class="project" href="https://kilhas.com.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/kilhas.webp" alt="Website da Kilhas" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Website & Suporte</div>
+                        <div class="project-title">Kilhas</div>
+                    </div>
+                </a>
+                <a class="project" href="https://danielprimo.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/daniel-primo.webp" alt="Website do Daniel Primo" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Website WordPress</div>
+                        <div class="project-title">Daniel Primo</div>
+                    </div>
+                </a>
+                <a class="project" href="https://inti.rio/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/portfolio/inti.webp" alt="Website do Inti" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-type">Suporte</div>
+                        <div class="project-title">Inti</div>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -949,22 +1014,21 @@
             <h2>Parceiros de Sucesso</h2>
             <p class="clients-intro">Trabalhamos com marcas inovadoras e empresas que buscam excelência digital. Cada cliente é uma parceria estratégica.</p>
             <div class="clients-grid" role="region" aria-label="Lista de clientes">
-                <a href="#" class="client-logo" aria-label="Cliente Lan Maritime">Lan Maritime</a>
-                <a href="#" class="client-logo" aria-label="Cliente Criamente">Criamente</a>
-                <a href="#" class="client-logo" aria-label="Cliente PH Advocacia">PH Advocacia</a>
-                <a href="#" class="client-logo" aria-label="Cliente Instituto Mar">Instituto Mar</a>
-                <a href="#" class="client-logo" aria-label="Cliente Galeria Surf">Galeria Surf</a>
-                <a href="#" class="client-logo" aria-label="Cliente Ponytail">Ponytail</a>
-                <a href="#" class="client-logo" aria-label="Cliente Master Med">Master Med</a>
-                <a href="#" class="client-logo" aria-label="Cliente Enovasys">Enovasys</a>
-                <a href="#" class="client-logo" aria-label="Cliente Ceduek">Ceduek</a>
-                <a href="#" class="client-logo" aria-label="Cliente Promofy">Promofy</a>
-                <a href="#" class="client-logo" aria-label="Cliente Kilhas">Kilhas</a>
-                <a href="#" class="client-logo" aria-label="Cliente Grande Peixe">Grande Peixe</a>
-                <a href="#" class="client-logo" aria-label="Cliente Valeria Marques">Valeria Marques</a>
-                <a href="#" class="client-logo" aria-label="Cliente Inti Rio">Inti Rio</a>
-                <a href="#" class="client-logo" aria-label="Cliente Costa Blanca">Costa Blanca</a>
-                <a href="#" class="client-logo" aria-label="Cliente Aocomunicação">Aocomunicação</a>
+                <a href="https://margauxeyewear.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Margaux Eyewear">Margaux Eyewear</a>
+                <a href="https://lanmaritimelab.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Lan Maritime Lab">Lan Maritime Lab</a>
+                <a href="https://enovasys.net.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente E-novasys">E-novasys</a>
+                <a href="https://phadvocacia.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente PH Advocacia">PH Advocacia</a>
+                <a href="https://institutomarurbano.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Instituto Mar Urbano">Instituto Mar Urbano</a>
+                <a href="https://www.galeriasurf.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Galeria Surf">Galeria Surf</a>
+                <a href="https://riomarmores.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Riomarmores">Riomarmores</a>
+                <a href="https://inti.rio/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Inti">Inti</a>
+                <a href="https://www.ponytail.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Ponytail">Ponytail</a>
+                <a href="https://mastermedsst.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Master Med">Master Med</a>
+                <a href="https://www.riodesc.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Riodesc">Riodesc</a>
+                <a href="https://criamente.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Criamente">Criamente</a>
+                <a href="https://costablancafilms.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Costa Blanca Films">Costa Blanca Films</a>
+                <a href="https://grandepeixe.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Grande Peixe">Grande Peixe</a>
+                <a href="https://www.lafontainebags.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Lafontaine Bags">Lafontaine Bags</a>
                 <a href="https://magicbrain.ai/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente MagicBrain AI">MagicBrain AI</a>
                 <a href="https://riosurftech.com.br/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Rio Surf Tech">Rio Surf Tech</a>
                 <a href="https://galeriamovinmento.com/" target="_blank" rel="noopener noreferrer" class="client-logo" aria-label="Cliente Galeria Movimento">Galeria Movimento</a>
@@ -976,22 +1040,22 @@
             <article class="about-content">
                 <h2>Quem Somos</h2>
                 <p class="about-desc">Somos um estúdio digital focado em criar experiências que funcionam. Desde a estratégia até a entrega, cada projeto recebe atenção meticosa e expertise técnica de ponta.</p>
-                <div class="about-stats" role="region" aria-label="Estatísticas da agência">
+                <div class="about-stats" role="region" aria-label="Plataformas com que trabalhamos">
                     <div class="stat">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Clientes</div>
+                        <div class="stat-value">WordPress</div>
+                        <div class="stat-label">Sites institucionais</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">200+</div>
-                        <div class="stat-label">Projetos</div>
+                        <div class="stat-value">WooCommerce</div>
+                        <div class="stat-label">Lojas virtuais</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">12+</div>
-                        <div class="stat-label">Anos</div>
+                        <div class="stat-value">Shopify</div>
+                        <div class="stat-label">E-commerce</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">99%</div>
-                        <div class="stat-label">Satisfação</div>
+                        <div class="stat-value">Nuvemshop</div>
+                        <div class="stat-label">E-commerce</div>
                     </div>
                 </div>
             </article>
@@ -1035,7 +1099,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2024 EZALX. Todos os direitos reservados.</span>
+                <span>&copy; 2026 EZALX. Todos os direitos reservados.</span>
                 <span>CNPJ 50.538.516/0001-62</span>
             </div>
         </div>
@@ -1049,8 +1113,8 @@
         "name": "EZALX",
         "description": "Agência digital especializada em websites, e-commerces e soluções digitais estratégicas",
         "url": "https://ezalx.netlify.app/",
-        "logo": "https://ezalx.netlify.app/logo.png",
-        "image": "https://ezalx.netlify.app/og-image.png",
+        "logo": "https://ezalx.netlify.app/images/ezalx-logo.svg",
+        "image": "https://ezalx.netlify.app/ezalx.png",
         "telephone": "+5521996813723",
         "email": "ezal.pereira@gmail.com",
         "address": {
@@ -1085,9 +1149,8 @@
         "@type": "Organization",
         "name": "EZALX",
         "url": "https://ezalx.netlify.app",
-        "logo": "https://ezalx.netlify.app/logo.png",
+        "logo": "https://ezalx.netlify.app/images/ezalx-logo.svg",
         "description": "Agência digital que cria websites, e-commerces e soluções digitais estratégicas",
-        "foundingDate": "2012",
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Sales",
