@@ -6,7 +6,7 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 
 ## Serviços
 
-- Sites e e-commerce: sites institucionais, landing pages e lojas virtuais em WordPress, WooCommerce, Shopify, Nuvemshop, Irroba e Wix.
+- Sites e e-commerce: sites institucionais, landing pages e lojas virtuais em WordPress, WooCommerce, Shopify, Nuvemshop, Irroba e Wix Commerce.
 - SEO: otimização técnica, SEO on-page e off-page, pesquisa de palavras-chave, dados estruturados, velocidade e construção de autoridade.
 - GEO (Generative Engine Optimization): site, dados estruturados e conteúdo preparados para que assistentes e buscadores com IA entendam, citem e recomendem a marca.
 - Social media: planejamento, criação, edição e publicação de conteúdo e estratégia digital para redes sociais.
