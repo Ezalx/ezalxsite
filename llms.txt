@@ -32,6 +32,12 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 - [Instituto Mar Urbano](https://institutomarurbano.com.br/): site, suporte e atualização de conteúdo contínuos
 - [Bibi Sucos](https://bibisucos.com.br/): site e vinhetas para mídia indoor
 
+## Notícias
+
+- [Google inicia o spam update de setembro de 2026](https://ezalx.netlify.app/noticias/google-spam-update-setembro-2026/): o que muda e como proteger o site
+- [Search Console ganha filtro para buscas com imagem](https://ezalx.netlify.app/noticias/search-console-filtro-multimodal/): Google Lens, Circle to Search e como otimizar imagens
+- [Google testa pagar sites usados em respostas com IA](https://ezalx.netlify.app/noticias/google-paga-sites-respostas-ia/): o AI contribution pilot e o que significa para o GEO
+
 ## Perguntas frequentes
 
 - Prazo: websites simples levam de 15 a 30 dias; e-commerces, de 30 a 60 dias.

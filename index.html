@@ -846,6 +846,59 @@
             .clients-list a, .clients-list span { min-height: 60px; font-size: 14px; padding: 12px; }
         }
 
+        /* === NEWS === */
+        .news-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: clamp(40px, 6vw, 64px); }
+        .news-head .section-head { margin-bottom: 0; }
+
+        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; list-style: none; }
+
+        .news-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+        }
+
+        .news-card:hover, .news-card:focus-within { border-color: var(--accent); transform: translateY(-4px); }
+        .news-card:has(a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        .news-cover {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            aspect-ratio: 16 / 9;
+            padding: 24px;
+            background-color: #0a0a0a;
+            background-image:
+                radial-gradient(circle at var(--glow-x, 80%) var(--glow-y, 20%), rgba(6, 236, 242, 0.35), transparent 55%),
+                linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 100% 100%, 32px 32px, 32px 32px;
+            color: #fff;
+        }
+
+        .news-cover span { font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
+        .news-cover span b { color: var(--accent); font-weight: 800; }
+        .news-cover--spam { --glow-x: 85%; --glow-y: 15%; }
+        .news-cover--lens { --glow-x: 20%; --glow-y: 20%; }
+        .news-cover--ia { --glow-x: 70%; --glow-y: 85%; }
+
+        .news-body { display: flex; flex-direction: column; flex: 1; padding: 24px; }
+        .news-meta { font-size: 13px; color: var(--muted); }
+        .news-meta b { color: var(--accent-text); font-weight: 600; }
+        .news-card h3 { margin-top: 10px; font-size: 20px; line-height: 1.25; }
+        .news-card h3 a::after { content: ''; position: absolute; inset: 0; }
+        .news-card h3 a:focus-visible { outline: none; }
+        .news-excerpt { margin-top: 10px; font-size: 15px; color: var(--muted); }
+        .news-more { margin-top: auto; padding-top: 20px; font-size: 14px; font-weight: 600; color: var(--accent-text); }
+
+        @media (max-width: 1024px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .news-grid { grid-template-columns: 1fr; } }
+
         /* === FAQ === */
         .faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
         .faq-grid .section-head { position: sticky; top: calc(var(--nav-h) + 32px); margin-bottom: 0; }
@@ -1271,6 +1324,49 @@
             </div>
         </section>
 
+        <!-- NEWS -->
+        <section class="section" id="noticias" aria-labelledby="noticias-title">
+            <div class="container">
+                <div class="news-head">
+                    <div class="section-head">
+                        <p class="eyebrow">Notícias</p>
+                        <h2 id="noticias-title">O que está mudando no SEO.</h2>
+                        <p>As novidades do Google e das buscas com IA, explicadas com o que muda na prática para o seu site.</p>
+                    </div>
+                    <a class="btn btn-ghost" href="noticias/">Ver todas as notícias</a>
+                </div>
+                <ul class="news-grid">
+                    <li class="news-card">
+                        <div class="news-cover news-cover--spam" aria-hidden="true"><span>Spam update<br><b>setembro 2026</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>Google</b> · <time datetime="2026-09-28">28 set 2026</time></p>
+                            <h3><a href="noticias/google-spam-update-setembro-2026/">Google inicia o spam update de setembro de 2026: o que muda para o seu site</a></h3>
+                            <p class="news-excerpt">Quarto spam update do ano tem lançamento global de até duas semanas. Veja como proteger o seu site.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
+                    <li class="news-card">
+                        <div class="news-cover news-cover--lens" aria-hidden="true"><span>Busca com<br><b>imagem</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>Search Console</b> · <time datetime="2026-09-28">28 set 2026</time></p>
+                            <h3><a href="noticias/search-console-filtro-multimodal/">Search Console ganha filtro para buscas com imagem, Lens e Circle to Search</a></h3>
+                            <p class="news-excerpt">Agora dá para ver quais páginas do seu site são encontradas por buscas visuais.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
+                    <li class="news-card">
+                        <div class="news-cover news-cover--ia" aria-hidden="true"><span>Conteúdo<br>que vale <b>$</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>IA &amp; GEO</b> · <time datetime="2026-09-28">28 set 2026</time></p>
+                            <h3><a href="noticias/google-paga-sites-respostas-ia/">Google testa pagar sites cujo conteúdo alimenta respostas com IA</a></h3>
+                            <p class="news-excerpt">Piloto no Search Console paga sites usados pelo Gemini, AI Overviews e AI Mode.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- FAQ -->
         <section class="section" id="faq" aria-labelledby="faq-title">
             <div class="container faq-grid">
@@ -1350,6 +1446,7 @@
                         <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#faq">Dúvidas</a></li>
+                        <li><a href="noticias/">Notícias</a></li>
                     </ul>
                 </nav>
                 <div>
