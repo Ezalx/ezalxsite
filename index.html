@@ -776,6 +776,8 @@
 
         .project-title { display: block; margin-top: 4px; font-family: var(--font-display); font-size: 20px; font-weight: 600; }
 
+        .project--wide { grid-column: span 2; }
+
         @media (max-width: 1024px) {
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
             .project:first-child { grid-column: auto; }
@@ -783,6 +785,7 @@
 
         @media (max-width: 640px) {
             .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; gap: 16px; }
+            .project--wide { grid-column: auto; }
         }
 
         /* === ABOUT === */
@@ -1224,17 +1227,13 @@
                         <img src="images/portfolio/hamilton-de-holanda.webp" alt="Site do músico Hamilton de Holanda criado pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site · WordPress</span><span class="project-title">Hamilton de Holanda</span></span>
                     </a>
-                    <a class="project" href="https://institutomarurbano.com.br/" target="_blank" rel="noopener">
+                    <a class="project project--wide" href="https://institutomarurbano.com.br/" target="_blank" rel="noopener">
                         <img src="images/portfolio/institutomarurbano.webp" alt="Site do Instituto Mar Urbano mantido pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site + conteúdo contínuo</span><span class="project-title">Instituto Mar Urbano</span></span>
                     </a>
                     <a class="project" href="https://bibisucos.com.br/" target="_blank" rel="noopener">
                         <img src="images/portfolio/bibisucos.webp" alt="Site da Bibi Sucos mantido pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site &amp; mídia indoor</span><span class="project-title">Bibi Sucos</span></span>
-                    </a>
-                    <a class="project" href="https://criamente.com/" target="_blank" rel="noopener">
-                        <img src="images/portfolio/criamente.webp" alt="Site da Criamente com animações ajustadas pela EZALX" loading="lazy" width="1050" height="700">
-                        <span class="project-info"><span class="project-type">Animações CSS/JS</span><span class="project-title">Criamente</span></span>
                     </a>
                     <a class="project" href="https://kilhas.com.br/" target="_blank" rel="noopener">
                         <img src="images/portfolio/kilhas.webp" alt="Site da Kilhas criado pela EZALX" loading="lazy" width="1050" height="700">
