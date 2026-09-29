@@ -409,6 +409,24 @@
             .nav-menu a::after { display: none; }
         }
 
+        /* === HERO BACKGROUND (grafo de IA animado) === */
+        .hero { position: relative; }
+        .hero > :not(.hero-bg) { position: relative; z-index: 1; }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 0;
+            display: block;
+            width: 100vw;
+            height: 100%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
+        }
+
         /* === HERO === */
         .hero {
             padding-top: calc(var(--nav-h) + clamp(40px, 7vw, 96px));
@@ -954,7 +972,7 @@
         }
 
         @media print {
-            .site-nav, .hero-visual, .cta { display: none; }
+            .site-nav, .hero-visual, .hero-bg, .cta { display: none; }
             body { background: #fff; color: #000; }
         }
     </style>
@@ -988,6 +1006,7 @@
     <main id="main" tabindex="-1">
         <!-- HERO -->
         <section class="hero container" aria-labelledby="hero-title">
+            <canvas class="hero-bg" aria-hidden="true"></canvas>
             <div class="hero-content">
                 <p class="eyebrow">Agência digital no Rio de Janeiro</p>
                 <h1 id="hero-title">Sites, SEO e redes sociais para sua marca ser vista e escolhida.</h1>
@@ -1382,6 +1401,183 @@
                 });
             });
         });
+
+        // Hero background: animated AI graph (nodes, edges and data pulses)
+        (() => {
+            const canvas = document.querySelector('.hero-bg');
+            if (!canvas || !canvas.getContext) return;
+            const hero = canvas.parentElement;
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            const finePointer = window.matchMedia('(pointer: fine)');
+
+            let w = 0, h = 0, raf = null, visible = true, pointer = null, colors = {};
+            let nodes = [], pulses = [];
+
+            const toRgb = (value) => {
+                const hex = value.trim().replace('#', '');
+                return [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16)).join(',');
+            };
+
+            const readColors = () => {
+                const styles = getComputedStyle(document.documentElement);
+                colors = {
+                    node: toRgb(styles.getPropertyValue('--accent')),
+                    line: toRgb(styles.getPropertyValue('--accent-text'))
+                };
+            };
+
+            const makeNode = (x, y) => ({
+                x, y,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                r: Math.random() * 1.4 + 1.1,
+                hub: Math.random() < 0.12
+            });
+
+            const resize = () => {
+                const rect = canvas.getBoundingClientRect();
+                if (!rect.width || !rect.height) return;
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                const sx = w ? rect.width / w : 1;
+                const sy = h ? rect.height / h : 1;
+                w = rect.width;
+                h = rect.height;
+                canvas.width = Math.round(w * dpr);
+                canvas.height = Math.round(h * dpr);
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+                nodes.forEach((n) => { n.x *= sx; n.y *= sy; });
+                const density = w < 640 ? 8000 : 15000;
+                const target = Math.round(Math.min(90, Math.max(26, (w * h) / density)));
+                while (nodes.length < target) nodes.push(makeNode(Math.random() * w, Math.random() * h));
+                nodes.length = target;
+                pulses = [];
+            };
+
+            const draw = (move) => {
+                ctx.clearRect(0, 0, w, h);
+                const maxDist = Math.min(170, Math.max(110, w / 9));
+                const maxDist2 = maxDist * maxDist;
+                const edges = [];
+
+                if (move) {
+                    for (const n of nodes) {
+                        n.x += n.vx;
+                        n.y += n.vy;
+                        if (n.x < 0 || n.x > w) n.vx *= -1;
+                        if (n.y < 0 || n.y > h) n.vy *= -1;
+                        n.x = Math.max(0, Math.min(w, n.x));
+                        n.y = Math.max(0, Math.min(h, n.y));
+                    }
+                }
+
+                // Edges
+                ctx.lineWidth = 1;
+                for (let i = 0; i < nodes.length; i++) {
+                    const a = nodes[i];
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const b = nodes[j];
+                        const dx = a.x - b.x, dy = a.y - b.y;
+                        const d2 = dx * dx + dy * dy;
+                        if (d2 > maxDist2) continue;
+                        const alpha = (1 - Math.sqrt(d2) / maxDist) * 0.28;
+                        ctx.strokeStyle = `rgba(${colors.line},${alpha})`;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.stroke();
+                        edges.push([a, b]);
+                    }
+                }
+
+                // Pointer connections
+                if (pointer) {
+                    for (const n of nodes) {
+                        const d = Math.hypot(n.x - pointer.x, n.y - pointer.y);
+                        if (d > 180) continue;
+                        ctx.strokeStyle = `rgba(${colors.line},${(1 - d / 180) * 0.45})`;
+                        ctx.beginPath();
+                        ctx.moveTo(pointer.x, pointer.y);
+                        ctx.lineTo(n.x, n.y);
+                        ctx.stroke();
+                    }
+                }
+
+                // Data pulses travelling along edges
+                if (move && edges.length && pulses.length < 16 && Math.random() < 0.08) {
+                    const [a, b] = edges[Math.floor(Math.random() * edges.length)];
+                    pulses.push({ a, b, t: 0, speed: 0.006 + Math.random() * 0.012 });
+                }
+                pulses = pulses.filter((p) => {
+                    if (move) p.t += p.speed;
+                    if (p.t >= 1 || Math.hypot(p.a.x - p.b.x, p.a.y - p.b.y) > maxDist) return false;
+                    const x = p.a.x + (p.b.x - p.a.x) * p.t;
+                    const y = p.a.y + (p.b.y - p.a.y) * p.t;
+                    const glow = ctx.createRadialGradient(x, y, 0, x, y, 8);
+                    glow.addColorStop(0, `rgba(${colors.node},0.9)`);
+                    glow.addColorStop(1, `rgba(${colors.node},0)`);
+                    ctx.fillStyle = glow;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 8, 0, Math.PI * 2);
+                    ctx.fill();
+                    return true;
+                });
+
+                // Nodes
+                for (const n of nodes) {
+                    if (n.hub) {
+                        ctx.strokeStyle = `rgba(${colors.line},0.35)`;
+                        ctx.beginPath();
+                        ctx.arc(n.x, n.y, n.r + 5, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+                    ctx.fillStyle = `rgba(${colors.node},${n.hub ? 0.9 : 0.6})`;
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.hub ? n.r + 1.2 : n.r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            };
+
+            const loop = () => { draw(true); raf = requestAnimationFrame(loop); };
+            const stop = () => { if (raf) cancelAnimationFrame(raf); raf = null; };
+            const start = () => {
+                if (raf || reduceMotion.matches || !visible || document.hidden) return;
+                raf = requestAnimationFrame(loop);
+            };
+            const render = () => {
+                stop();
+                if (reduceMotion.matches) draw(false);
+                else start();
+            };
+
+            readColors();
+            resize();
+            render();
+
+            let resizeFrame = null;
+            new ResizeObserver(() => {
+                cancelAnimationFrame(resizeFrame);
+                resizeFrame = requestAnimationFrame(() => { resize(); if (!raf) draw(false); });
+            }).observe(hero);
+
+            new IntersectionObserver(([entry]) => {
+                visible = entry.isIntersecting;
+                visible ? start() : stop();
+            }).observe(hero);
+
+            document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+            reduceMotion.addEventListener('change', render);
+            darkScheme.addEventListener('change', () => { readColors(); if (!raf) draw(false); });
+
+            hero.addEventListener('pointermove', (e) => {
+                if (!finePointer.matches) return;
+                const rect = canvas.getBoundingClientRect();
+                pointer = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+            });
+            hero.addEventListener('pointerleave', () => { pointer = null; });
+        })();
     </script>
 </body>
 </html>
