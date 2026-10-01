@@ -801,14 +801,10 @@
         .process { list-style: none; border-top: 1px solid var(--border); }
 
         .process li {
-            display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 16px;
             padding: 28px 0;
             border-bottom: 1px solid var(--border);
         }
 
-        .process-num { font-family: var(--font-display); font-size: 28px; font-weight: 700; line-height: 1; color: var(--accent-text); }
         .process h3 { font-size: 20px; margin-bottom: 6px; }
         .process p { color: var(--muted); font-size: 15px; }
 
@@ -888,6 +884,7 @@
         .news-cover--spam { --glow-x: 85%; --glow-y: 15%; }
         .news-cover--lens { --glow-x: 20%; --glow-y: 20%; }
         .news-cover--ia { --glow-x: 70%; --glow-y: 85%; }
+        .news-cover--humano { --glow-x: 25%; --glow-y: 80%; }
 
         .news-body { display: flex; flex-direction: column; flex: 1; padding: 24px; }
         .news-meta { font-size: 13px; color: var(--muted); }
@@ -1070,7 +1067,7 @@
                     <a class="btn btn-primary" href="https://wa.me/5521996813723?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-location="hero">Começar meu projeto</a>
                     <a class="btn btn-ghost" href="#portfolio">Ver trabalhos</a>
                 </div>
-                <p class="hero-proof">Marcas que já confiam: <strong>Ponytail, Margaux Eyewear, IMU, Riomarmores, Cena Tropica, MCT</strong> e outras.</p>
+                <p class="hero-proof">Marcas que já confiam: <strong>Ponytail, Margaux Eyewear, IMU, Riomarmores, Cena Tropical, MCT</strong> e outras.</p>
             </div>
             <div class="hero-visual" aria-hidden="true">
                 <div class="browser browser--main">
@@ -1202,13 +1199,45 @@
                     <p>Sites, lojas virtuais, vídeos e suporte contínuo para empresas de diferentes segmentos. Clique para visitar cada projeto.</p>
                 </div>
                 <div class="portfolio-grid">
+                    <a class="project" href="https://galeriamovimento.com.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/galeria-movimento.webp" alt="Loja virtual da Galeria Movimento desenvolvida pela EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">E-commerce · Wix</span><span class="project-title">Galeria Movimento</span></span>
+                    </a>
+                    <a class="project" href="https://cenatropical.com.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/cena-tropical.webp" alt="Site institucional da Cena Tropical Comunicações criado pela EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Site institucional · WordPress</span><span class="project-title">Cena Tropical</span></span>
+                    </a>
+                    <a class="project" href="https://surfyogaflow.com.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/surf-yoga-flow.webp" alt="Landing page da Surf Yoga Flow criada pela EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Landing page · Elementor</span><span class="project-title">Surf Yoga Flow</span></span>
+                    </a>
+                    <a class="project" href="https://agenda227.org.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/agenda-227.webp" alt="Site 100% acessível da Agenda 227, programado pela EZALX em parceria com a Criamente" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Site 100% acessível · parceria Criamente</span><span class="project-title">Agenda 227</span></span>
+                    </a>
+                    <a class="project" href="https://riodesc.com.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/riodesc.webp" alt="E-commerce completo da Riodesc desenvolvido pela EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">E-commerce completo</span><span class="project-title">Riodesc</span></span>
+                    </a>
+                    <a class="project" href="https://oceansidesurfboards.com.br/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/oceanside-surfboards.webp" alt="Site catálogo de pranchas da Oceanside Surfboards criado pela EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Site catálogo · WooCommerce</span><span class="project-title">Oceanside Surfboards</span></span>
+                    </a>
+                    <a class="project" href="https://www.instagram.com/p/DcqXfIyveXt/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/wave-hunters.webp" alt="Conteúdo para redes sociais da Wave Hunters, editado pela EZALX em parceria com o Rio Surf Check" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Edição &amp; parceria · Rio Surf Check</span><span class="project-title">Wave Hunters</span></span>
+                    </a>
+                    <a class="project" href="https://www.instagram.com/p/Dcd3PLqxc05/" target="_blank" rel="noopener">
+                        <img src="images/portfolio/surfmappers.webp" alt="Conteúdo para Instagram da Surfmappers criado pela EZALX em parceria com o Rio Surf Check e Leandro Rosa" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Conteúdo Instagram · Rio Surf Check &amp; Leandro Rosa</span><span class="project-title">Surfmappers</span></span>
+                    </a>
                     <a class="project" href="https://lanmaritimelab.com/" target="_blank" rel="noopener">
                         <img src="images/portfolio/lan-maritime-lab-pt.webp" alt="Site institucional da Lan Maritime Lab criado pela EZALX" loading="lazy" width="1050" height="700">
                         <span class="project-info"><span class="project-type">Site institucional · WordPress</span><span class="project-title">Lan Maritime Lab</span></span>
                     </a>
                     <a class="project" href="https://ponytail.com.br/" target="_blank" rel="noopener">
-                        <img src="images/portfolio/ponytail.webp" alt="Loja virtual da Ponytail desenvolvida pela EZALX" loading="lazy" width="1050" height="700">
-                        <span class="project-info"><span class="project-type">E-commerce · Irroba</span><span class="project-title">Ponytail</span></span>
+                        <img src="images/portfolio/ponytail.webp" alt="Loja virtual da Ponytail migrada para a Shopify com participação da EZALX" loading="lazy" width="1050" height="700">
+                        <span class="project-info"><span class="project-type">Migração Shopify + suporte contínuo</span><span class="project-title">Ponytail</span></span>
                     </a>
                     <a class="project" href="https://www.galeriasurf.com/" target="_blank" rel="noopener">
                         <img src="images/portfolio/galeria-surf.webp" alt="Loja virtual da Galeria Surf desenvolvida pela EZALX" loading="lazy" width="1050" height="700">
@@ -1269,19 +1298,15 @@
                 </div>
                 <ol class="process" aria-label="Como trabalhamos">
                     <li>
-                        <span class="process-num" aria-hidden="true">01</span>
                         <div><h3>Diagnóstico</h3><p>Entendemos seu negócio, seus objetivos e como sua marca aparece hoje no Google, nas IAs e nas redes.</p></div>
                     </li>
                     <li>
-                        <span class="process-num" aria-hidden="true">02</span>
                         <div><h3>Estratégia</h3><p>Definimos o que construir, o que comunicar e onde estar para alcançar os clientes certos.</p></div>
                     </li>
                     <li>
-                        <span class="process-num" aria-hidden="true">03</span>
                         <div><h3>Criação</h3><p>Design, desenvolvimento e conteúdo sob medida, com SEO e GEO aplicados desde o início.</p></div>
                     </li>
                     <li>
-                        <span class="process-num" aria-hidden="true">04</span>
                         <div><h3>Acompanhamento</h3><p>Suporte, atualizações e melhorias contínuas para sua presença digital seguir crescendo.</p></div>
                     </li>
                 </ol>
@@ -1330,20 +1355,20 @@
                 </div>
                 <ul class="news-grid">
                     <li class="news-card">
+                        <div class="news-cover news-cover--humano" aria-hidden="true"><span>Feito por<br><b>gente de verdade</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>Conteúdo</b> · <time datetime="2026-10-01">1 out 2026</time></p>
+                            <h3><a href="noticias/conteudo-humano-era-da-ia/">Conteúdo humano real será o mais valorizado na era da IA</a></h3>
+                            <p class="news-excerpt">Com a enxurrada de conteúdo feito por IA, experiência real e histórias verdadeiras viram o maior diferencial das marcas.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
+                    <li class="news-card">
                         <div class="news-cover news-cover--spam" aria-hidden="true"><span>Spam update<br><b>setembro 2026</b></span></div>
                         <div class="news-body">
                             <p class="news-meta"><b>Google</b> · <time datetime="2026-09-28">28 set 2026</time></p>
                             <h3><a href="noticias/google-spam-update-setembro-2026/">Google inicia o spam update de setembro de 2026: o que muda para o seu site</a></h3>
                             <p class="news-excerpt">Quarto spam update do ano tem lançamento global de até duas semanas. Veja como proteger o seu site.</p>
-                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
-                        </div>
-                    </li>
-                    <li class="news-card">
-                        <div class="news-cover news-cover--lens" aria-hidden="true"><span>Busca com<br><b>imagem</b></span></div>
-                        <div class="news-body">
-                            <p class="news-meta"><b>Search Console</b> · <time datetime="2026-09-28">28 set 2026</time></p>
-                            <h3><a href="noticias/search-console-filtro-multimodal/">Search Console ganha filtro para buscas com imagem, Lens e Circle to Search</a></h3>
-                            <p class="news-excerpt">Agora dá para ver quais páginas do seu site são encontradas por buscas visuais.</p>
                             <span class="news-more" aria-hidden="true">Ler notícia →</span>
                         </div>
                     </li>

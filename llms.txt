@@ -23,8 +23,16 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 
 ## Portfólio (seleção)
 
+- [Galeria Movimento](https://galeriamovimento.com.br/): e-commerce no Wix
+- [Cena Tropical](https://cenatropical.com.br/): site institucional em WordPress
+- [Surf Yoga Flow](https://surfyogaflow.com.br/): landing page em Elementor
+- [Agenda 227](https://agenda227.org.br/): site 100% acessível, programado em parceria com a Criamente
+- [Riodesc](https://riodesc.com.br/): e-commerce completo
+- [Oceanside Surfboards](https://oceansidesurfboards.com.br/): site catálogo de produtos em WooCommerce
+- [Wave Hunters](https://www.instagram.com/p/DcqXfIyveXt/): edição de vídeo e parceria de conteúdo para redes sociais por meio do Rio Surf Check
+- [Surfmappers](https://www.instagram.com/p/Dcd3PLqxc05/): criação de conteúdo para Instagram em parceria com o Rio Surf Check e Leandro Rosa
 - [Lan Maritime Lab](https://lanmaritimelab.com/): site institucional em WordPress
-- [Ponytail](https://ponytail.com.br/): e-commerce na plataforma Irroba
+- [Ponytail](https://ponytail.com.br/): participação na migração do e-commerce para a Shopify e suporte contínuo
 - [Galeria Surf](https://www.galeriasurf.com/): e-commerce na Nuvemshop
 - [PH Advocacia](https://phadvocacia.com/): site para escritório de advocacia
 - [Master Med](https://mastermedsst.com.br/): site institucional em WordPress
@@ -34,6 +42,7 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 
 ## Notícias
 
+- [Conteúdo humano real será o mais valorizado na era da IA](https://ezalx.netlify.app/noticias/conteudo-humano-era-da-ia/): por que experiência real virou diferencial para marcas, SEO e GEO
 - [Google inicia o spam update de setembro de 2026](https://ezalx.netlify.app/noticias/google-spam-update-setembro-2026/): o que muda e como proteger o site
 - [Search Console ganha filtro para buscas com imagem](https://ezalx.netlify.app/noticias/search-console-filtro-multimodal/): Google Lens, Circle to Search e como otimizar imagens
 - [Google testa pagar sites usados em respostas com IA](https://ezalx.netlify.app/noticias/google-paga-sites-respostas-ia/): o AI contribution pilot e o que significa para o GEO

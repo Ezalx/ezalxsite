@@ -243,6 +243,7 @@ p { text-wrap: pretty; }
 .news-cover--spam { --glow-x: 85%; --glow-y: 15%; }
 .news-cover--lens { --glow-x: 20%; --glow-y: 20%; }
 .news-cover--ia { --glow-x: 70%; --glow-y: 85%; }
+.news-cover--humano { --glow-x: 25%; --glow-y: 80%; }
 
 /* === NEWS CARDS (listagem e "leia também") === */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; list-style: none; }
