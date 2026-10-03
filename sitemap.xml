@@ -2,11 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://ezalx.netlify.app/</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-03</lastmod>
     </url>
     <url>
         <loc>https://ezalx.netlify.app/noticias/</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-03</lastmod>
+    </url>
+    <url>
+        <loc>https://ezalx.netlify.app/noticias/dados-estruturados-schema-video/</loc>
+        <lastmod>2026-10-03</lastmod>
+    </url>
+    <url>
+        <loc>https://ezalx.netlify.app/noticias/vlibras-acessibilidade-libras-sites/</loc>
+        <lastmod>2026-10-03</lastmod>
     </url>
     <url>
         <loc>https://ezalx.netlify.app/noticias/conteudo-humano-era-da-ia/</loc>

@@ -244,6 +244,8 @@ p { text-wrap: pretty; }
 .news-cover--lens { --glow-x: 20%; --glow-y: 20%; }
 .news-cover--ia { --glow-x: 70%; --glow-y: 85%; }
 .news-cover--humano { --glow-x: 25%; --glow-y: 80%; }
+.news-cover--libras { --glow-x: 80%; --glow-y: 75%; }
+.news-cover--schema { --glow-x: 15%; --glow-y: 30%; }
 
 /* === NEWS CARDS (listagem e "leia também") === */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; list-style: none; }
@@ -319,6 +321,9 @@ p { text-wrap: pretty; }
 .article-body > ul, .article-body > ol { margin-top: 16px; padding-left: 22px; display: grid; gap: 10px; font-size: 17px; line-height: 1.7; color: var(--text-2); }
 .article-body strong { color: var(--fg); }
 .article-body a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.article-body code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; padding: 2px 6px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.article-body > pre { margin-top: 20px; padding: 20px 22px; overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; line-height: 1.6; color: var(--text-2); }
+.article-body > pre code { padding: 0; background: none; border: 0; font-size: inherit; }
 
 .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
 .sources h2 { font-size: 18px; }

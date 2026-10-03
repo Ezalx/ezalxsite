@@ -42,6 +42,8 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 
 ## Notícias
 
+- [Dados estruturados: Google atualiza o Schema de vídeo](https://ezalx.netlify.app/noticias/dados-estruturados-schema-video/): creator e interactionStatistic no VideoObject, fim dos resultados de FAQ e Schema nas buscas com IA
+- [VLibras: por que todo site deveria falar Libras](https://ezalx.netlify.app/noticias/vlibras-acessibilidade-libras-sites/): o que é o VLibras, o que diz a Lei Brasileira de Inclusão e como instalar no site
 - [Conteúdo humano real será o mais valorizado na era da IA](https://ezalx.netlify.app/noticias/conteudo-humano-era-da-ia/): por que experiência real virou diferencial para marcas, SEO e GEO
 - [Google inicia o spam update de setembro de 2026](https://ezalx.netlify.app/noticias/google-spam-update-setembro-2026/): o que muda e como proteger o site
 - [Search Console ganha filtro para buscas com imagem](https://ezalx.netlify.app/noticias/search-console-filtro-multimodal/): Google Lens, Circle to Search e como otimizar imagens

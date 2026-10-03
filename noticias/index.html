@@ -59,10 +59,12 @@
                 "mainEntity": {
                     "@type": "ItemList",
                     "itemListElement": [
-                        { "@type": "ListItem", "position": 1, "url": "https://ezalx.netlify.app/noticias/conteudo-humano-era-da-ia/" },
-                        { "@type": "ListItem", "position": 2, "url": "https://ezalx.netlify.app/noticias/google-spam-update-setembro-2026/" },
-                        { "@type": "ListItem", "position": 3, "url": "https://ezalx.netlify.app/noticias/search-console-filtro-multimodal/" },
-                        { "@type": "ListItem", "position": 4, "url": "https://ezalx.netlify.app/noticias/google-paga-sites-respostas-ia/" }
+                        { "@type": "ListItem", "position": 1, "url": "https://ezalx.netlify.app/noticias/dados-estruturados-schema-video/" },
+                        { "@type": "ListItem", "position": 2, "url": "https://ezalx.netlify.app/noticias/vlibras-acessibilidade-libras-sites/" },
+                        { "@type": "ListItem", "position": 3, "url": "https://ezalx.netlify.app/noticias/conteudo-humano-era-da-ia/" },
+                        { "@type": "ListItem", "position": 4, "url": "https://ezalx.netlify.app/noticias/google-spam-update-setembro-2026/" },
+                        { "@type": "ListItem", "position": 5, "url": "https://ezalx.netlify.app/noticias/search-console-filtro-multimodal/" },
+                        { "@type": "ListItem", "position": 6, "url": "https://ezalx.netlify.app/noticias/google-paga-sites-respostas-ia/" }
                     ]
                 }
             },
@@ -119,6 +121,24 @@
         <section class="page-list" aria-label="Lista de notícias">
             <div class="container">
                 <ul class="news-grid">
+                    <li class="news-card">
+                        <div class="news-cover news-cover--schema" aria-hidden="true"><span>&lt;Schema&gt;<br><b>VideoObject</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>Dados estruturados</b> · <time datetime="2026-10-03">3 out 2026</time></p>
+                            <h2><a href="/noticias/dados-estruturados-schema-video/">Dados estruturados: Google atualiza o Schema de vídeo</a></h2>
+                            <p class="news-excerpt">Criador e estatísticas de engajamento entram no VideoObject. Veja o que muda e o que ainda vale marcar no seu site.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
+                    <li class="news-card">
+                        <div class="news-cover news-cover--libras" aria-hidden="true"><span>Seu site<br>em <b>Libras</b></span></div>
+                        <div class="news-body">
+                            <p class="news-meta"><b>Acessibilidade</b> · <time datetime="2026-10-03">3 out 2026</time></p>
+                            <h2><a href="/noticias/vlibras-acessibilidade-libras-sites/">VLibras: por que todo site deveria falar Libras</a></h2>
+                            <p class="news-excerpt">Ferramenta gratuita do governo traduz o site para Libras. Veja por que ela importa, o que diz a lei e como instalar.</p>
+                            <span class="news-more" aria-hidden="true">Ler notícia →</span>
+                        </div>
+                    </li>
                     <li class="news-card">
                         <div class="news-cover news-cover--humano" aria-hidden="true"><span>Feito por<br><b>gente de verdade</b></span></div>
                         <div class="news-body">
@@ -201,5 +221,16 @@
     </footer>
 
     <script src="/noticias/noticias.js" defer></script>
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
