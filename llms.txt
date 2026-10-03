@@ -36,6 +36,7 @@ A EZALX reúne tecnologia, design, segurança e comunicação. Cria sites e loja
 - [Galeria Surf](https://www.galeriasurf.com/): e-commerce na Nuvemshop
 - [PH Advocacia](https://phadvocacia.com/): site para escritório de advocacia
 - [Master Med](https://mastermedsst.com.br/): site institucional em WordPress
+- [Clínica Ceduek](https://ceduek.com.br/): criação de website em WordPress para a clínica do Dr. Carlos Eduardo Duek, reumatologia e clínica médica
 - [Hamilton de Holanda](https://hamiltondeholanda.com/): site em WordPress
 - [Instituto Mar Urbano](https://institutomarurbano.com.br/): site, suporte e atualização de conteúdo contínuos
 - [Bibi Sucos](https://bibisucos.com.br/): site e vinhetas para mídia indoor
